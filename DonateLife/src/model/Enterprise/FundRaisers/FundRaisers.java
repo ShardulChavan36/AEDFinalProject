@@ -9,7 +9,7 @@ import model.Enterprise.Enterprise;
 
 /**
  *
- * @author harshaljaiswal
+ * @author smiti
  */
 public class FundRaisers extends Enterprise{
     
