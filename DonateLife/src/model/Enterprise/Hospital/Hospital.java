@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Shardul
+ * @author shreyasrai
  */
 public class Hospital extends Enterprise {
 
