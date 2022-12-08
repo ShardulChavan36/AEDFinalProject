@@ -204,7 +204,7 @@ public class HospAdminSignIn extends javax.swing.JPanel {
         });
         add(txtZip, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 590, 210, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Hospital1.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/Hospital/Hospital1.jpg"))); // NOI18N
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 1480, 850));
     }// </editor-fold>//GEN-END:initComponents
 
