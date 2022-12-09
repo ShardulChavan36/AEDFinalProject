@@ -13,7 +13,7 @@ import model.Enterprise.TransportLogistics.Handler;
 
 /**
  *
- * @author harshaljaiswal
+ * @author Shardul
  */
 public class DonateEntity {
 
