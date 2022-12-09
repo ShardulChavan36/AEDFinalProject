@@ -12,6 +12,9 @@ import model.Enterprise.Hospital.Nurse;
 import model.Enterprise.Hospital.Patient;
 import model.Organization.User;
 import java.util.ArrayList;
+import model.Enterprise.DonorInventory.DonorDetails;
+import model.Enterprise.DonorInventory.DonorInventory;
+import model.Enterprise.Lab.Technician;
 
 /**
  *
@@ -24,12 +27,18 @@ public class EcoSystem {
     private ArrayList<Doctor> doctordirectory;
     private ArrayList<Nurse> nursedirectory;
     private ArrayList<Patient> patientdirectory;
+    private ArrayList<DonorDetails> donordirectory;
+    private ArrayList<DonorInventory> donorbankdirectory;
+    private ArrayList<Technician> techdirectory;
 
     public EcoSystem() {
         hospitaldirectory = new HospitalDirectory();
         this.doctordirectory = new ArrayList();
         this.nursedirectory = new ArrayList();
         this.patientdirectory = new ArrayList();
+        this.techdirectory = new ArrayList();
+        this.donordirectory = new ArrayList();
+        this.donorbankdirectory = new ArrayList();
     }
 
     public static EcoSystem getInstance() {
@@ -75,7 +84,72 @@ public class EcoSystem {
     public void setPatientdirectory(ArrayList<Patient> patientdirectory) {
         this.patientdirectory = patientdirectory;
     }
+    public ArrayList<DonorDetails> getDonordirectory() {
+        try {
+            return donordirectory;
+        } catch (Exception e) {
+            this.donordirectory = new ArrayList();
+            return donordirectory;
+        }
 
+    }
+
+    public void setDonordirectory(ArrayList<DonorDetails> donordirectory) {
+        this.donordirectory = donordirectory;
+    }
+
+    public ArrayList<DonorInventory> getDonorbankdirectory() {
+        return donorbankdirectory;
+    }
+
+    public void setDonorbankdirectory(ArrayList<DonorInventory> donorbankdirectory) {
+        this.donorbankdirectory = donorbankdirectory;
+    }
+
+    public static EcoSystem getBusiness() {
+        return business;
+    }
+
+    public static void setBusiness(EcoSystem business) {
+        EcoSystem.business = business;
+    }
+
+    public ArrayList<Technician> getTechdirectory() {
+        return techdirectory;
+    }
+
+    public void setTechdirectory(ArrayList<Technician> techdirectory) {
+        this.techdirectory = techdirectory;
+    }
+
+    public void addDonor(DonorDetails donor) {
+        try {
+            donordirectory.add(donor);
+        } catch (Exception e) {
+            this.donordirectory = new ArrayList();
+            donordirectory.add(donor);
+
+        }
+    }
+
+    public void addDonorBank(DonorInventory donor) {
+        try {
+            donorbankdirectory.add(donor);
+        } catch (Exception e) {
+            this.donorbankdirectory = new ArrayList();
+            donorbankdirectory.add(donor);
+            e.printStackTrace();
+        }
+    }
+     public void addTech(Technician tech) {
+        try {
+            techdirectory.add(tech);
+        } catch (Exception e) {
+            this.techdirectory = new ArrayList();
+            techdirectory.add(tech);
+
+        }
+    }
 
     public void addDoctor(Doctor doc) {
         try {
@@ -132,6 +206,26 @@ public class EcoSystem {
             }
         }
     }
+    public void deleteDonorBank(String donorBankUName) {
+
+        for (DonorInventory n : donorbankdirectory) {
+            System.out.println("donorb " + n.getUsername());
+            if (n.getUsername().equals(donorBankUName)) {
+                System.out.println("found");
+                donorbankdirectory.remove(n);
+                return;
+            }
+        }
+    }
+
+    public void deleteDonor(String donorName) {
+        for (DonorDetails n : donordirectory) {
+            if (n.getEmaildId().equals(donorName)) {
+                donordirectory.remove(n);
+                return;
+            }
+        }
+    }
 
     public Object loginCheck(String usr, String pass) {
 
@@ -155,7 +249,25 @@ public class EcoSystem {
                 return p;
             }
         }
+        for (Technician tech : techdirectory) {
+            //System.out.println("LoginCheck(doc): " + don.getUname() + " " + don.getPswd());
+            if (tech.getEmaildId().equals(usr) && tech.getPswd().equals(pass)) {
+                return tech;
+            }
+        }
 
+        for (DonorDetails don : donordirectory) {
+            //System.out.println("LoginCheck(doc): " + don.getUname() + " " + don.getPswd());
+            if (don.getEmaildId().equals(usr) && don.getPswd().equals(pass)) {
+                return don;
+            }
+        }
+        for (DonorInventory don : donorbankdirectory) {
+            //System.out.println("LoginCheck(doc): " + don.getUname() + " " + don.getPswd());
+            if (don.getUsername().equals(usr) && don.getPassword().equals(pass)) {
+                return don;
+            }
+        }
        
         return null;
     }
