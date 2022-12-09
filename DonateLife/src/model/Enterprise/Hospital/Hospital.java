@@ -20,7 +20,6 @@ public class Hospital extends Enterprise {
 
     public Hospital(String enterpriseName, String registeryNumber, String address, String username, String password) {
         super(enterpriseName, registeryNumber, address, username, password);
-
         this.doctordirectory = new ArrayList();
         this.nursedirectory = new ArrayList();
         this.patientdirectory = new ArrayList();
