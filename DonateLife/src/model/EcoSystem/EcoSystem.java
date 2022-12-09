@@ -15,6 +15,9 @@ import java.util.ArrayList;
 import model.Enterprise.DonorInventory.DonorDetails;
 import model.Enterprise.DonorInventory.DonorInventory;
 import model.Enterprise.Lab.Technician;
+import model.Enterprise.TransportLogistics.Handler;
+import model.Enterprise.TransportLogistics.Vehicle;
+import model.Organization.DonateEntity;
 
 /**
  *
@@ -30,6 +33,9 @@ public class EcoSystem {
     private ArrayList<DonorDetails> donordirectory;
     private ArrayList<DonorInventory> donorbankdirectory;
     private ArrayList<Technician> techdirectory;
+    private ArrayList<DonateEntity> donateEntityList;
+    private ArrayList<Handler> handlerdirectory;
+    private ArrayList<Vehicle> vehicledirectory;
 
     public EcoSystem() {
         hospitaldirectory = new HospitalDirectory();
@@ -39,6 +45,9 @@ public class EcoSystem {
         this.techdirectory = new ArrayList();
         this.donordirectory = new ArrayList();
         this.donorbankdirectory = new ArrayList();
+        this.donateEntityList = new ArrayList();
+        this.handlerdirectory = new ArrayList();
+        this.vehicledirectory = new ArrayList();
     }
 
     public static EcoSystem getInstance() {
@@ -122,6 +131,33 @@ public class EcoSystem {
         this.techdirectory = techdirectory;
     }
 
+    public ArrayList<DonateEntity> getDonateEntityList() {
+        return donateEntityList;
+    }
+
+    public void setDonateEntityList(ArrayList<DonateEntity> donateEntityList) {
+        this.donateEntityList = donateEntityList;
+    }
+
+    public ArrayList<Handler> getHandlerdirectory() {
+        return handlerdirectory;
+    }
+
+    public void setHandlerdirectory(ArrayList<Handler> handlerdirectory) {
+        this.handlerdirectory = handlerdirectory;
+    }
+
+    public ArrayList<Vehicle> getVehicledirectory() {
+        return vehicledirectory;
+    }
+
+    public void setVehicledirectory(ArrayList<Vehicle> vehicledirectory) {
+        this.vehicledirectory = vehicledirectory;
+    }
+    
+
+    
+    
     public void addDonor(DonorDetails donor) {
         try {
             donordirectory.add(donor);
@@ -180,6 +216,36 @@ public class EcoSystem {
             e.printStackTrace();
         }
     }
+    public void addDonateEntity(DonateEntity de) {
+        try {
+            donateEntityList.add(de);
+
+        } catch (Exception e) {
+            this.donateEntityList = new ArrayList();
+            donateEntityList.add(de);
+        }
+    }
+public void addHandler(Handler handler) {
+        try {
+            handlerdirectory.add(handler);
+        } catch (Exception e) {
+            this.handlerdirectory = new ArrayList();
+            handlerdirectory.add(handler);
+
+        }
+    }
+
+    public void addVehicle(Vehicle vehicle) {
+        try {
+            vehicledirectory.add(vehicle);
+        } catch (Exception e) {
+            this.vehicledirectory = new ArrayList();
+            vehicledirectory.add(vehicle);
+
+        }
+    }
+
+    
     public void deleteDoctor(String doctorUName) {
         for (Doctor d : doctordirectory) {
             if (d.getEmaildId().equals(doctorUName)) {
@@ -268,6 +334,12 @@ public class EcoSystem {
                 return don;
             }
         }
+        for (Handler don : handlerdirectory) {
+            //System.out.println("LoginCheck(doc): " + don.getUname() + " " + don.getPswd());
+            if (don.getEmaildId().equals(usr) && don.getPswd().equals(pass)) {
+                return don;
+            }
+        }
        
         return null;
     }
@@ -279,6 +351,99 @@ public class EcoSystem {
             }
         }
         return null;
+    }
+
+     public void deleteDonorBYuserName(String doctorUName) {
+        for (DonorDetails n : donordirectory) {
+            if (n.getEmaildId().equals(doctorUName)) {
+//                donordirectory.remove(n);
+                return;
+            }
+        }
+    }
+     public void deleteHandler(String HUname) {
+
+        for (Handler n : handlerdirectory) {
+            if (n.getEmaildId().equals(HUname)) {
+                handlerdirectory.remove(n);
+                return;
+            }
+        }
+    }
+
+    public void deleteVehicle(String vNumber) {
+
+        for (Vehicle n : vehicledirectory) {
+            if (n.getVehicleNo().equals(vNumber)) {
+                vehicledirectory.remove(n);
+                return;
+            }
+        }
+    }
+
+    public User findPatientByUserName(String patUname) {
+        for (Patient p : patientdirectory) {
+            if (p.getEmaildId().equals(patUname)) {
+                return p;
+            }
+        }
+        for (DonorDetails p : donordirectory) {
+            if (p.getEmaildId().equals(patUname)) {
+                return p;
+            }
+        }
+        return null;
+    }
+    private Technician findTechnicianByUname(String tech) {
+        for (Technician d : techdirectory) {
+            if (d.getEmaildId().equals(tech)) {
+                return d;
+            }
+        }
+        return null;
+    }
+    public Vehicle getVehicleByNumber(String vecNo) {
+
+        System.out.println("vec no:" + vecNo.substring(0, vecNo.indexOf("|")));
+        for (Vehicle v : vehicledirectory) {
+            if (v.getVehicleNo().matches(vecNo.substring(0, vecNo.indexOf("|")))) {
+                return v;
+
+            }
+        }
+        return null;
+    }
+    private Handler findHandlerByUname(String handler) {
+        for (Handler d : handlerdirectory) {
+             System.out.println("print :"+d.getEmaildId());
+            if (d.getEmaildId().toLowerCase().equals(handler.toLowerCase())) {
+                System.out.println("print found:"+d.getEmaildId());
+                return d;
+            }
+        }
+        return null;
+    }
+public void generateRequesting(String donateEntity, String handler, String tech, Hospital rec, String doc, String recPat) {
+        Handler h = findHandlerByUname(handler);
+        Technician t = findTechnicianByUname(tech);
+        Doctor d = findDoctorByUserName(doc);
+        Patient p = (Patient) findPatientByUserName(recPat);
+        for (DonateEntity de : donateEntityList) {
+            try {
+                if (de.getId().equals(donateEntity)) {
+                    de.setHandler(h);
+                    de.setTechnician(t);
+                    de.setReceiverEnterprise(rec);
+                    de.setReceiverDoctor(d);
+                    de.setReceiverPatient(p);
+                    de.setStatus("Requested");
+                    return;
+                }
+            } catch (Exception e) {
+
+            }
+        }
+
     }
 
 }
