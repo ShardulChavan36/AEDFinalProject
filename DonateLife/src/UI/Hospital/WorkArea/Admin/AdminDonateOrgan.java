@@ -126,7 +126,7 @@ public class AdminDonateOrgan extends javax.swing.JPanel {
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 20, 720, 40));
 
         jLabel7.setBackground(new java.awt.Color(0, 204, 204));
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Hospital1.jpg"))); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/Hospital/WorkArea/Admin/Hospital1.jpg"))); // NOI18N
         jLabel7.setText("jLabel7");
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1680, 1010));
 

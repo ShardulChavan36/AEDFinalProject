@@ -101,7 +101,7 @@ public class AdminPatient extends javax.swing.JPanel {
         });
         add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 430, -1, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Hospital1.jpg"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/Hospital/WorkArea/Admin/Hospital1.jpg"))); // NOI18N
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, -1, 740));
     }// </editor-fold>//GEN-END:initComponents
 

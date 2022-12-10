@@ -244,7 +244,7 @@ public class AdminReceiveOrgan extends javax.swing.JPanel {
         jLabel5.setText("Patient:");
         add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(388, 800, 140, -1));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Hospital1.jpg"))); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/Hospital/WorkArea/Admin/Hospital1.jpg"))); // NOI18N
         add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 1570, 910));
     }// </editor-fold>//GEN-END:initComponents
 

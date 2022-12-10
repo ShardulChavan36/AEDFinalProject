@@ -10,7 +10,7 @@ import java.util.Date;
 
 /**
  *
- * @author shreyasrai
+ * @author smiti
  */
 public class Technician extends User {
     

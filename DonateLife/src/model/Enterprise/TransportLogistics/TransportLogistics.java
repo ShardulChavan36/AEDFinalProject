@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author harshaljaiswal
+ * @author smiti
  */
 public class TransportLogistics extends Enterprise {
     
