@@ -17,7 +17,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author Mayur
+ * @author smiti
  */
 public class TechLogin extends javax.swing.JPanel {
 
