@@ -17,7 +17,7 @@ import javax.swing.SwingUtilities;
 
 /**
  *
- * @author Mayur
+ * @author smiti
  */
 public class DonorBankAdminLogin extends javax.swing.JPanel {
 
