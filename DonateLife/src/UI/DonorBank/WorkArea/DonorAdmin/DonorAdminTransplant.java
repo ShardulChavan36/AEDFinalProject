@@ -1,12 +1,13 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
-package UI.Hospital.WorkArea.Admin;
+package UI.DonorBank.WorkArea.DonorAdmin;
 
 import model.DB4OUtil.DB4OUtil;
 import model.EcoSystem.EcoSystem;
-import model.Enterprise.Hospital.Hospital;
+import model.Enterprise.DonorInventory.DonorInventory;
 import model.Organization.DonateEntity;
 import UI.MainFrame;
 import javax.swing.table.DefaultTableModel;
@@ -15,23 +16,23 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author smiti
  */
-public class AdminTransplants extends javax.swing.JPanel {
+public class DonorAdminTransplant extends javax.swing.JPanel {
 
     /**
-     * Creates new form AdminTransplants
+     * Creates new form DonorAdminTransplant
      */
     MainFrame mainScreen;
     private EcoSystem ecoSystem;
     private DB4OUtil dB4OUtil;
-    Hospital hospital;
-
-    public AdminTransplants(MainFrame mainScreen, DB4OUtil dB4OUtil, EcoSystem ecoSystem, Hospital h) {
+    DonorInventory donbank;
+    
+    public DonorAdminTransplant(MainFrame mainScreen, DB4OUtil dB4OUtil, EcoSystem ecoSystem, DonorInventory donbank) {
         initComponents();
         this.mainScreen = mainScreen;
         this.dB4OUtil = dB4OUtil;
         this.ecoSystem = ecoSystem;
-        this.hospital = h;
-        populateTable(hospital.getEnterpriseName().toLowerCase());
+        this.donbank = donbank;
+        populateTable(donbank.getEnterpriseName().toLowerCase());
     }
 
     /**
@@ -45,13 +46,9 @@ public class AdminTransplants extends javax.swing.JPanel {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         tb1 = new javax.swing.JTable();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 204, 204));
-        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setBackground(javax.swing.UIManager.getDefaults().getColor("Button.hoverBorderColor"));
 
-        tb1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         tb1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null},
@@ -62,20 +59,36 @@ public class AdminTransplants extends javax.swing.JPanel {
             new String [] {
                 "Type", "Blood group", "Entity name", "Status", "Donor Enterprise", "Receiver Enterprise", "Patient Name", "Donar name"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane1.setViewportView(tb1);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 220, 871, 249));
-
-        jLabel1.setFont(new java.awt.Font("Rockwell Extra Bold", 1, 36)); // NOI18N
-        jLabel1.setText("TRANSPLANT MANAGEMENT");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 30, -1, -1));
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/Hospital/WorkArea/Admin/Hospital1.jpg"))); // NOI18N
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 1540, 920));
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(84, 84, 84)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 871, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(89, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(187, 187, 187)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(198, Short.MAX_VALUE))
+        );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void populateTable(String name) {
+ private void populateTable(String name) {
         DefaultTableModel model = (DefaultTableModel) tb1.getModel();
         model.setRowCount(0);
         System.out.println("populatetable");
@@ -149,9 +162,8 @@ public class AdminTransplants extends javax.swing.JPanel {
         }
 
     }
+ 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tb1;
     // End of variables declaration//GEN-END:variables

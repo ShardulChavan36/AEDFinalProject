@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author shreyasrai
+ * @author smiti
  */
 public class Lab extends Enterprise{
     
