@@ -103,7 +103,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8-handle-with-care-48.png"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/icons8-handle-with-care-48.png"))); // NOI18N
 
         jLabel4.setFont(new java.awt.Font("Gill Sans Ultra Bold", 1, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
@@ -139,7 +139,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8-charity-48.png"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/icons8-charity-48.png"))); // NOI18N
 
         jLabel6.setFont(new java.awt.Font("Gill Sans Ultra Bold", 1, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
@@ -175,7 +175,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8-lab-items-48.png"))); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/icons8-lab-items-48.png"))); // NOI18N
 
         jLabel8.setFont(new java.awt.Font("Gill Sans Ultra Bold", 1, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
@@ -211,7 +211,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8-microsoft-admin-48.png"))); // NOI18N
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/icons8-microsoft-admin-48.png"))); // NOI18N
 
         jLabel14.setFont(new java.awt.Font("Gill Sans Ultra Bold", 1, 18)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
@@ -245,7 +245,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8-hospital-sign-48.png"))); // NOI18N
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/icons8-hospital-sign-48.png"))); // NOI18N
 
         jLabel12.setFont(new java.awt.Font("Gill Sans Ultra Bold", 1, 18)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
@@ -283,7 +283,7 @@ public class MainFrame extends javax.swing.JFrame {
         jLabel15.setText("Donate A Life");
         jPanel3.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 60, 490, 58));
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8-close-50.png"))); // NOI18N
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/icons8-close-50.png"))); // NOI18N
         jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel9MouseClicked(evt);
