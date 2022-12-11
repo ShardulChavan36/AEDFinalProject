@@ -13,8 +13,6 @@ import model.Enterprise.Enterprise;
  */
 public class Organization extends Enterprise{
     private String orgName;
-    private String orgRegistrationNo;
-    private String address;
     private String orgUsername;
     private String orgpassword;
 
@@ -33,21 +31,6 @@ public class Organization extends Enterprise{
         this.orgName = orgName;
     }
 
-    public String getOrgRegistrationNo() {
-        return orgRegistrationNo;
-    }
-
-    public void setOrgRegistrationNo(String orgRegistrationNo) {
-        this.orgRegistrationNo = orgRegistrationNo;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
 
     public String getOrgUsername() {
         return orgUsername;
