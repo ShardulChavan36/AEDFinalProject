@@ -8,7 +8,7 @@ import model.DB4OUtil.DB4OUtil;
 import model.EcoSystem.EcoSystem;
 import model.Enterprise.TransportLogistics.Handler;
 import model.Enterprise.TransportLogistics.Vehicle;
-import model.Firebase.FirebaseHelper;
+//import model.Firebase.FirebaseHelper;
 import UI.MainFrame;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -23,7 +23,7 @@ public class ManageLogistics extends javax.swing.JPanel {
      * Creates new form ManageLogistics
      */
     MainFrame mainFrame;
-    FirebaseHelper firebaseHelper;
+//    FirebaseHelper firebaseHelper;
     private EcoSystem ecoSystem;
     private DB4OUtil dB4OUtil;
 
