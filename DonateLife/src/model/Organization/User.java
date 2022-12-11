@@ -16,7 +16,7 @@ public class User {
 private String emaildId;
 private String pswd;
 private String id;
-private String name;
+public String name;
 private String add;
 private String gender;
 private String contactNo;
