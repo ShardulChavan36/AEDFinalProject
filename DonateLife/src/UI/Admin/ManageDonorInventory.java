@@ -881,12 +881,22 @@ public class ManageDonorInventory extends javax.swing.JPanel {
     }//GEN-LAST:event_txtZip1KeyReleased
 
     private void btn_signupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_signupActionPerformed
-        // TODO add your handling code here:
+        // TODO add your handling code here
+        String randomEncId;
+        randomEncId=String.valueOf(Math.random()*999+100);
+        
+        for(DonorDetails e:ecoSystem.getDonordirectory()){
+            if(randomEncId.equals(e.getId())){
+               
+               randomEncId =String.valueOf(Math.random()*9999+100);
+            }
+            
+        }
         String address = txtAdd.getText() + txtCity.getText() + txtState.getText() + txtZip.getText();
         //uname, pswd, id, name, add, gender, telenum, dob
         //(txtFullName.getText(), txtNo.getText(), address, txtUsrName.getText(), txtPass.getText());
 
-        DonorDetails donor = new DonorDetails(txtUsrName1.getText(), txtPass1.getText(), "idid", txtFullName1.getText(), address, cmb_gender.getSelectedItem().toString(), txt_telenum.getText(), jDateChooser1.getDate(),cmb_donorbnkname.getSelectedItem().toString(),"");
+        DonorDetails donor = new DonorDetails(txtUsrName1.getText(), txtPass1.getText(), randomEncId, txtFullName1.getText(), address, cmb_gender.getSelectedItem().toString(), txt_telenum.getText(), jDateChooser1.getDate(),cmb_donorbnkname.getSelectedItem().toString(),"");
 
         ecoSystem.addDonor(donor);
         dB4OUtil.storeSystem(ecoSystem);

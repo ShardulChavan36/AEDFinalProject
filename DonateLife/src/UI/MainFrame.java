@@ -93,10 +93,10 @@ public class MainFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel10.setBackground(new java.awt.Color(0, 204, 204));
+        jPanel10.setBackground(javax.swing.UIManager.getDefaults().getColor("Button.default.focusColor"));
         jPanel10.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        TransportBtnPanel.setBackground(new java.awt.Color(0, 102, 102));
+        TransportBtnPanel.setBackground(javax.swing.UIManager.getDefaults().getColor("Button.default.focusedBorderColor"));
         TransportBtnPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 TransportBtnPaneljPanel4MouseClicked(evt);
@@ -132,7 +132,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         jPanel10.add(TransportBtnPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 370, 50));
 
-        DonorBankBtnPanel.setBackground(new java.awt.Color(0, 102, 102));
+        DonorBankBtnPanel.setBackground(javax.swing.UIManager.getDefaults().getColor("Button.default.focusedBorderColor"));
         DonorBankBtnPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 DonorBankBtnPanelMouseClicked(evt);
@@ -168,7 +168,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         jPanel10.add(DonorBankBtnPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 360, 370, -1));
 
-        LabBtnPanel.setBackground(new java.awt.Color(0, 102, 102));
+        LabBtnPanel.setBackground(javax.swing.UIManager.getDefaults().getColor("Button.default.focusedBorderColor"));
         LabBtnPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 LabBtnPanelMouseClicked(evt);
@@ -204,7 +204,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         jPanel10.add(LabBtnPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 500, 370, 50));
 
-        AdminBtnPanel.setBackground(new java.awt.Color(0, 102, 102));
+        AdminBtnPanel.setBackground(javax.swing.UIManager.getDefaults().getColor("Button.default.focusedBorderColor"));
         AdminBtnPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 AdminBtnPanelMouseClicked(evt);
@@ -238,7 +238,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         jPanel10.add(AdminBtnPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 660, 370, 50));
 
-        HospBtnPanel.setBackground(new java.awt.Color(0, 102, 102));
+        HospBtnPanel.setBackground(javax.swing.UIManager.getDefaults().getColor("Button.hoverBorderColor"));
         HospBtnPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 HospBtnPanelMouseClicked(evt);
@@ -274,7 +274,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         jSplitPane1.setLeftComponent(jPanel10);
 
-        jPanel3.setBackground(new java.awt.Color(0, 153, 153));
+        jPanel3.setBackground(javax.swing.UIManager.getDefaults().getColor("Button.default.focusedBackground"));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel15.setBackground(new java.awt.Color(255, 255, 255));
