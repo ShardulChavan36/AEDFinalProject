@@ -19,7 +19,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author harshaljaiswal
+ * @author Shardul
  */
 public class AdminDoctor extends javax.swing.JPanel {
 
@@ -60,31 +60,33 @@ public class AdminDoctor extends javax.swing.JPanel {
         doctorName = new javax.swing.JTextField();
         doctorContact = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
+        jDateChooser1 = new com.toedter.calendar.JDateChooser();
         jLabel10 = new javax.swing.JLabel();
         doctorSpecialization = new javax.swing.JTextField();
         jLabel14 = new javax.swing.JLabel();
         txtUsrName = new javax.swing.JTextField();
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
+        txtAdd5 = new javax.swing.JTextField();
+        lbl_address5 = new javax.swing.JLabel();
+        doctorContact3 = new javax.swing.JTextField();
+        jLabel11 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         jLabel23 = new javax.swing.JLabel();
         jLabel34 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
-        patientZipCode2 = new javax.swing.JTextField();
-        txtAdd = new javax.swing.JTextField();
-        txtCity = new javax.swing.JTextField();
-        txtState = new javax.swing.JTextField();
+        txtZip2 = new javax.swing.JTextField();
+        txtAdd1 = new javax.swing.JTextField();
+        txtCity1 = new javax.swing.JTextField();
+        txtState2 = new javax.swing.JTextField();
         jLabel25 = new javax.swing.JLabel();
         doctorViewBtn = new javax.swing.JButton();
         doctorUpdateBtn = new javax.swing.JButton();
+        createDoc = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 204, 204));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         tb1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
                 {null, null, null, null},
                 {null, null, null, null},
                 {null, null, null, null},
@@ -96,20 +98,20 @@ public class AdminDoctor extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(tb1);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 150, 760, 209));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 60, 760, 209));
 
-        jLabel1.setFont(new java.awt.Font("Rockwell Extra Bold", 1, 48)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         jLabel1.setText("Manage Doctor");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 10, -1, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(458, 22, -1, -1));
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButton1.setText("Delete");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 390, 100, 40));
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 550, 100, 40));
 
         jPanel2.setBackground(new java.awt.Color(184, 216, 246));
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Personal Details"));
@@ -142,59 +144,103 @@ public class AdminDoctor extends javax.swing.JPanel {
             }
         });
 
+        txtAdd5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtAdd5ActionPerformed(evt);
+            }
+        });
+        txtAdd5.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtAdd5KeyReleased(evt);
+            }
+        });
+
+        lbl_address5.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lbl_address5.setText("Password");
+
+        doctorContact3.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                doctorContact3KeyTyped(evt);
+            }
+        });
+
+        jLabel11.setText("Gender");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(21, 21, 21)
+                .addGap(12, 12, 12)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel10)
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel4)
+                                .addComponent(jLabel3)
+                                .addComponent(jLabel8)
+                                .addComponent(jLabel14))
+                            .addGap(60, 60, 60)
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(doctorName, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
+                                .addComponent(doctorContact, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
+                                .addComponent(txtUsrName)
+                                .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(lbl_address5)
+                        .addGap(240, 240, 240)))
+                .addGap(58, 58, 58))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(txtAdd5, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(jLabel11)
+                .addGap(60, 60, 60)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel10)
-                        .addGap(31, 31, 31)
-                        .addComponent(doctorSpecialization, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel8)
-                            .addComponent(jLabel14))
-                        .addGap(60, 60, 60)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(doctorName, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
-                            .addComponent(doctorContact, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
-                            .addComponent(txtUsrName)
-                            .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(44, Short.MAX_VALUE))
+                        .addComponent(doctorSpecialization, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, 0))
+                    .addComponent(doctorContact3))
+                .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(28, 28, 28)
+                .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(doctorName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3))
-                .addGap(22, 22, 22)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(doctorContact, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4))
-                .addGap(20, 20, 20)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel8)
-                    .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(14, 14, 14)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel8))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel14)
                     .addComponent(txtUsrName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtAdd5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_address5))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(doctorContact3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel11))
+                .addGap(5, 5, 5)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10)
                     .addComponent(doctorSpecialization, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
-        add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 580, 360, 260));
-        jPanel2.getAccessibleContext().setAccessibleName("");
+        add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 280, -1, 260));
         jPanel2.getAccessibleContext().setAccessibleParent(jScrollPane1);
 
         jPanel6.setBackground(new java.awt.Color(184, 216, 246));
@@ -206,47 +252,47 @@ public class AdminDoctor extends javax.swing.JPanel {
 
         jLabel24.setText("Zip Code");
 
-        patientZipCode2.addActionListener(new java.awt.event.ActionListener() {
+        txtZip2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                patientZipCode2ActionPerformed(evt);
+                txtZip2ActionPerformed(evt);
             }
         });
-        patientZipCode2.addKeyListener(new java.awt.event.KeyAdapter() {
+        txtZip2.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                patientZipCode2KeyTyped(evt);
+                txtZip2KeyTyped(evt);
             }
         });
 
-        txtAdd.addActionListener(new java.awt.event.ActionListener() {
+        txtAdd1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtAddActionPerformed(evt);
+                txtAdd1ActionPerformed(evt);
             }
         });
-        txtAdd.addKeyListener(new java.awt.event.KeyAdapter() {
+        txtAdd1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
-                txtAddKeyReleased(evt);
+                txtAdd1KeyReleased(evt);
             }
         });
 
-        txtCity.addActionListener(new java.awt.event.ActionListener() {
+        txtCity1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtCityActionPerformed(evt);
+                txtCity1ActionPerformed(evt);
             }
         });
-        txtCity.addKeyListener(new java.awt.event.KeyAdapter() {
+        txtCity1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
-                txtCityKeyReleased(evt);
+                txtCity1KeyReleased(evt);
             }
         });
 
-        txtState.addActionListener(new java.awt.event.ActionListener() {
+        txtState2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtStateActionPerformed(evt);
+                txtState2ActionPerformed(evt);
             }
         });
-        txtState.addKeyListener(new java.awt.event.KeyAdapter() {
+        txtState2.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
-                txtStateKeyReleased(evt);
+                txtState2KeyReleased(evt);
             }
         });
 
@@ -265,8 +311,8 @@ public class AdminDoctor extends javax.swing.JPanel {
                             .addComponent(jLabel34))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtState, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(patientZipCode2, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtState2, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtZip2, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel6Layout.createSequentialGroup()
                         .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -274,34 +320,33 @@ public class AdminDoctor extends javax.swing.JPanel {
                             .addComponent(jLabel25))
                         .addGap(47, 47, 47)
                         .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtCity, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtAdd1, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtCity1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap(54, Short.MAX_VALUE))))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
-                .addContainerGap(10, Short.MAX_VALUE)
+                .addContainerGap(50, Short.MAX_VALUE)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtAdd1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel25))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtCity, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtCity1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel23))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel34)
-                    .addComponent(txtState, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtState2, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(patientZipCode2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtZip2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel24))
                 .addGap(30, 30, 30))
         );
 
-        add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 400, 380, 220));
-        jPanel6.getAccessibleContext().setAccessibleName("");
+        add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 280, 380, 260));
         jPanel6.getAccessibleContext().setAccessibleParent(jScrollPane1);
 
         doctorViewBtn.setBackground(java.awt.SystemColor.inactiveCaption);
@@ -313,7 +358,7 @@ public class AdminDoctor extends javax.swing.JPanel {
                 doctorViewBtnActionPerformed(evt);
             }
         });
-        add(doctorViewBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 610, 80, 40));
+        add(doctorViewBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 550, 80, 40));
 
         doctorUpdateBtn.setBackground(java.awt.SystemColor.inactiveCaption);
         doctorUpdateBtn.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
@@ -324,10 +369,20 @@ public class AdminDoctor extends javax.swing.JPanel {
                 doctorUpdateBtnActionPerformed(evt);
             }
         });
-        add(doctorUpdateBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 630, 100, 40));
+        add(doctorUpdateBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 550, 100, 40));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/Hospital/WorkArea/Admin/Hospital1.jpg"))); // NOI18N
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 1540, 900));
+        createDoc.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        createDoc.setText("Create Doctor");
+        createDoc.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        createDoc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                createDocActionPerformed(evt);
+            }
+        });
+        add(createDoc, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 550, 120, 40));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Hospital1.jpg"))); // NOI18N
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-5, -4, 1500, 900));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -339,18 +394,18 @@ public class AdminDoctor extends javax.swing.JPanel {
             return;
         }
         DefaultTableModel model = (DefaultTableModel) tb1.getModel();
-        String doctorUName = model.getValueAt(selectedRow, 1).toString();
+        String doctorUName = model.getValueAt(selectedRow, 0).toString();
         System.out.println(" doctor uname: " + doctorUName);
         ecoSystem.deleteDoctor(doctorUName);
         dB4OUtil.storeSystem(ecoSystem);
         populateDoctorTable();
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void patientZipCode2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_patientZipCode2ActionPerformed
+    private void txtZip2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtZip2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_patientZipCode2ActionPerformed
+    }//GEN-LAST:event_txtZip2ActionPerformed
 
-    private void patientZipCode2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_patientZipCode2KeyTyped
+    private void txtZip2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtZip2KeyTyped
         // TODO add your handling code here:
         try{
             //Allow only digits in Zip field
@@ -359,19 +414,19 @@ public class AdminDoctor extends javax.swing.JPanel {
                 evt.consume();
             }
             //Restrict the length to 5
-            if(patientZipCode2.getText().length() > 4){
+            if(txtZip2.getText().length() > 4){
                 evt.consume();
             }
         }catch(Exception e){
             System.out.println(e);
         }
-    }//GEN-LAST:event_patientZipCode2KeyTyped
+    }//GEN-LAST:event_txtZip2KeyTyped
 
-    private void txtAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAddActionPerformed
+    private void txtAdd1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAdd1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtAddActionPerformed
+    }//GEN-LAST:event_txtAdd1ActionPerformed
 
-    private void txtAddKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAddKeyReleased
+    private void txtAdd1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAdd1KeyReleased
         // TODO add your handling code here:
 
         //        String addrconv = "^[a-zA-Z0-9 ]{0,30}$";
@@ -383,13 +438,13 @@ public class AdminDoctor extends javax.swing.JPanel {
             //        } else {
             //            add_chk.setText("");
             //        }
-    }//GEN-LAST:event_txtAddKeyReleased
+    }//GEN-LAST:event_txtAdd1KeyReleased
 
-    private void txtCityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCityActionPerformed
+    private void txtCity1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCity1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtCityActionPerformed
+    }//GEN-LAST:event_txtCity1ActionPerformed
 
-    private void txtCityKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCityKeyReleased
+    private void txtCity1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCity1KeyReleased
         // TODO add your handling code here:
         //        String cityconv = "^[a-zA-Z ]{0,30}$";
         //        Pattern pat = Pattern.compile(cityconv);
@@ -400,13 +455,13 @@ public class AdminDoctor extends javax.swing.JPanel {
             //        } else {
             //            city_chk.setText("");
             //        }
-    }//GEN-LAST:event_txtCityKeyReleased
+    }//GEN-LAST:event_txtCity1KeyReleased
 
-    private void txtStateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtStateActionPerformed
+    private void txtState2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtState2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtStateActionPerformed
+    }//GEN-LAST:event_txtState2ActionPerformed
 
-    private void txtStateKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtStateKeyReleased
+    private void txtState2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtState2KeyReleased
         // TODO add your handling code here:
 
         //        String stateconv = "^[a-zA-Z ]{0,30}$";
@@ -418,7 +473,7 @@ public class AdminDoctor extends javax.swing.JPanel {
             //        } else {
             //            state_chk.setText("");
             //        }
-    }//GEN-LAST:event_txtStateKeyReleased
+    }//GEN-LAST:event_txtState2KeyReleased
 
     private void txtUsrNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsrNameActionPerformed
         // TODO add your handling code here:
@@ -446,53 +501,139 @@ public class AdminDoctor extends javax.swing.JPanel {
 
     private void doctorViewBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_doctorViewBtnActionPerformed
         // TODO add your handling code here:
+//        int selectedRowIndex1=tb1.getSelectedRow();
+//        if (selectedRowIndex1<0){
+//            JOptionPane.showMessageDialog(this,"Please select a row to view");
+//            return;
+//        }
+//        DefaultTableModel model1 = (DefaultTableModel)tb1.getModel();
+//        Doctor selectedDoc=(Doctor)model1.getValueAt(selectedRowIndex1,1);
+//        doctorName.setText(selectedDoc.getName());
+//        doctorContact.setText(selectedDoc.getContactNo());
+//        txtUsrName.setText(selectedDoc.getEmaildId());
+//        jDateChooser1.setDate(selectedDoc.getDob());
+//        doctorSpecialization.setText(selectedDoc.getSpeciality());
         int selectedRowIndex1=tb1.getSelectedRow();
         if (selectedRowIndex1<0){
-            JOptionPane.showMessageDialog(this,"Please select a row to view");
+            JOptionPane.showMessageDialog(this,"Please select a row to View");
             return;
         }
-        DefaultTableModel model1 = (DefaultTableModel)tb1.getModel();
-        Doctor selectedDoc=(Doctor)model1.getValueAt(selectedRowIndex1,1);
-        doctorName.setText(selectedDoc.getName());
-        doctorContact.setText(selectedDoc.getContactNo());
-        txtUsrName.setText(selectedDoc.getEmaildId());
-        jDateChooser1.setDate(selectedDoc.getDob());
-        doctorSpecialization.setText(selectedDoc.getSpeciality());
+        DefaultTableModel model = (DefaultTableModel) tb1.getModel();
+//        String docName = model.getValueAt(selectedRowIndex1, 0).toString();
+//        DefaultTableModel model1 = (DefaultTableModel) HospTable.getModel();
+//        Hospital selectedHosp=(Hospital)model1.getValueAt(selectedRowIndex1,0);
+//        Hospital h = ecoSystem.getHospitaldirectory().findHospital(hospitalName);
+//        Doctor d = ecoSystem.findDoctorByUserName(docName);
+        Doctor d= (Doctor)model.getValueAt(selectedRowIndex1, 0);
+        doctorName.setText(d.getName());
+        txtUsrName.setText(d.getEmaildId());
+        txtAdd5.setText(String.valueOf(d.getPswd()));
+       
+        doctorContact.setText(String.valueOf(d.getContactNo()));
+        txtAdd1.setText(d.getAdd());
+        jDateChooser1.setDate(d.getDob());
+        doctorSpecialization.setText(d.getSpeciality());
         
     }//GEN-LAST:event_doctorViewBtnActionPerformed
 
     private void doctorUpdateBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_doctorUpdateBtnActionPerformed
         // TODO add your handling code here:
-                int selectedRow = tb1.getSelectedRow();
-
-        if (selectedRow < 0) {
-            JOptionPane.showMessageDialog(this, "Please select a row to add status");
+//        int selectedRow = tb1.getSelectedRow();
+//
+//        if (selectedRow < 0) {
+//            JOptionPane.showMessageDialog(this, "Please select a row to add status");
+//            return;
+//        }
+//
+//        DefaultTableModel model = (DefaultTableModel) tb1.getModel();
+//        String id = model.getValueAt(selectedRow, 0).toString();
+//
+//        for (Doctor d : ecoSystem.getDoctordirectory()) {
+//            try {
+//                if (d.getEmaildId().equals(id)) {
+//                    d.setContactNo(doctorContact.getText());
+//                    d.setDob(jDateChooser1.getDate());
+//                    d.setName(doctorName.getName());
+//                    String address = txtAdd.getText() + txtCity.getText() + txtState.getText() + patientZipCode2.getText();
+//                    d.setAdd(address);
+//                    d.setSpeciality(doctorSpecialization.getText());
+//                    
+//                    
+//                }
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//            }
+//        }
+//
+//        dB4OUtil.storeSystem(ecoSystem);
+        int selectedRowIndex1=tb1.getSelectedRow();
+        if (selectedRowIndex1<0){
+            JOptionPane.showMessageDialog(this,"Please select a row to View");
             return;
         }
-
         DefaultTableModel model = (DefaultTableModel) tb1.getModel();
-        String id = model.getValueAt(selectedRow, 1).toString();
-
-        for (Doctor d : ecoSystem.getDoctordirectory()) {
-            try {
-                if (d.getEmaildId().equals(id)) {
-                    d.setContactNo(doctorContact.getText());
-                    d.setDob(jDateChooser1.getDate());
-                    d.setName(doctorName.getName());
-                    String address = txtAdd.getText() + txtCity.getText() + txtState.getText() + patientZipCode2.getText();
-                    d.setAdd(address);
-                    d.setSpeciality(doctorSpecialization.getText());
-                    
-                    
-                }
-            } catch (Exception e) {
-                e.printStackTrace();
+        Doctor d = (Doctor)model.getValueAt(selectedRowIndex1, 0);
+        String randomEncId;
+        randomEncId=String.valueOf(Math.random()*999+100);
+        
+        for(Doctor e:ecoSystem.getDoctordirectory()){
+            if(randomEncId.equals(e.getId())){
+               
+               randomEncId =String.valueOf(Math.random()*999+100);
             }
+            
         }
-
+        String address = txtAdd1.getText() + txtCity1.getText() + txtState2.getText() + txtZip2.getText();
+//        Doctor doctor = new Doctor(txtUsrName2.getText(), txtAdd5.getText(), randomEncId, doctorName.getText(), address, doctorContact3.getText(), doctorContact.getText(),jDateChooser1.getDate(),doctorSpecialization.getText(),hospitalList.getSelectedItem().toString());
+       d.setAdd(address);
+       d.setName(doctorName.getText());
+       d.setEmaildId(txtUsrName.getText());
+       d.setPswd(txtAdd5.getText());
+       d.setGender(doctorContact3.getText());
+       d.setContactNo(doctorContact.getText());
+       d.setDob(jDateChooser1.getDate());
+       d.setSpeciality(doctorSpecialization.getText());
+       d.setHospname(this.hospital.getEnterpriseName());
+//        ecoSystem.addDoctor(doctor);
         dB4OUtil.storeSystem(ecoSystem);
+        System.out.println("Doctor Updated");
+//        populateDoctorTable(ecoSystem.getDoctordirectory(), hospitalList.getSelectedItem().toString());
         populateDoctorTable();
     }//GEN-LAST:event_doctorUpdateBtnActionPerformed
+
+    private void txtAdd5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAdd5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtAdd5ActionPerformed
+
+    private void txtAdd5KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAdd5KeyReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtAdd5KeyReleased
+
+    private void doctorContact3KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_doctorContact3KeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_doctorContact3KeyTyped
+
+    private void createDocActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createDocActionPerformed
+        // TODO add your handling code here:
+        String randomEncId;
+        randomEncId=String.valueOf(Math.random()*999+100);
+
+        for(Doctor e:ecoSystem.getDoctordirectory()){
+            if(randomEncId.equals(e.getId())){
+
+                randomEncId =String.valueOf(Math.random()*999+100);
+            }
+
+        }
+        
+        String address = txtAdd1.getText() + txtCity1.getText() + txtState2.getText() + txtZip2.getText();
+        Doctor doctor = new Doctor(txtUsrName.getText(), txtAdd5.getText(), randomEncId, doctorName.getText(), address, doctorContact3.getText(), doctorContact.getText(),jDateChooser1.getDate(),doctorSpecialization.getText(),this.hospital.getEnterpriseName());
+
+        ecoSystem.addDoctor(doctor);
+        dB4OUtil.storeSystem(ecoSystem);
+        System.out.println("Doctor added");
+        populateDoctorTable();
+    }//GEN-LAST:event_createDocActionPerformed
 
     private void populateDoctorTable() {
         DefaultTableModel model = (DefaultTableModel) tb1.getModel();
@@ -502,7 +643,7 @@ public class AdminDoctor extends javax.swing.JPanel {
 
             if (d.getHospname().equals(hospital.getEnterpriseName())) {
                 Object[] row = new Object[5];
-                row[0] = d.getName();
+                row[0] = d;
                 row[1] = d.getEmaildId();
                 row[2] = d.getSpeciality();
                 row[3] = d.getAdd();
@@ -515,7 +656,9 @@ public class AdminDoctor extends javax.swing.JPanel {
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton createDoc;
     private javax.swing.JTextField doctorContact;
+    private javax.swing.JTextField doctorContact3;
     private javax.swing.JTextField doctorName;
     private javax.swing.JTextField doctorSpecialization;
     private javax.swing.JButton doctorUpdateBtn;
@@ -524,6 +667,7 @@ public class AdminDoctor extends javax.swing.JPanel {
     private com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel23;
@@ -536,11 +680,13 @@ public class AdminDoctor extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField patientZipCode2;
+    private javax.swing.JLabel lbl_address5;
     private javax.swing.JTable tb1;
-    private javax.swing.JTextField txtAdd;
-    private javax.swing.JTextField txtCity;
-    private javax.swing.JTextField txtState;
+    private javax.swing.JTextField txtAdd1;
+    private javax.swing.JTextField txtAdd5;
+    private javax.swing.JTextField txtCity1;
+    private javax.swing.JTextField txtState2;
     private javax.swing.JTextField txtUsrName;
+    private javax.swing.JTextField txtZip2;
     // End of variables declaration//GEN-END:variables
 }
