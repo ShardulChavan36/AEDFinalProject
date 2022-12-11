@@ -234,8 +234,8 @@ public class SignUpLab extends javax.swing.JPanel {
 
         labCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Diagnostic Dept", "R&D Dept", " " }));
 
-        lbl_labname1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        lbl_labname1.setText("Lab Department");
+        lbl_labname1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lbl_labname1.setText("Lab Department:");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);

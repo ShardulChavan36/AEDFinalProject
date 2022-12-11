@@ -40,7 +40,7 @@
         <Container class="javax.swing.JPanel" name="jPanel10">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="c3" red="8c" type="rgb"/>
+              <Color blue="99" green="99" red="0" type="rgb"/>
             </Property>
           </Properties>
           <Constraints>
@@ -56,7 +56,7 @@
             <Container class="javax.swing.JPanel" name="TransportBtnPanel">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="d1" green="b4" id="Active Caption" palette="2" red="99" type="palette"/>
+                  <Color blue="66" green="66" red="0" type="rgb"/>
                 </Property>
               </Properties>
               <Events>
@@ -117,7 +117,7 @@
             <Container class="javax.swing.JPanel" name="DonorBankBtnPanel">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="d1" green="b4" id="Active Caption" palette="2" red="99" type="palette"/>
+                  <Color blue="66" green="66" red="0" type="rgb"/>
                 </Property>
               </Properties>
               <Events>
@@ -178,7 +178,7 @@
             <Container class="javax.swing.JPanel" name="LabBtnPanel">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="d1" green="b4" id="Active Caption" palette="2" red="99" type="palette"/>
+                  <Color blue="66" green="66" red="0" type="rgb"/>
                 </Property>
               </Properties>
               <Events>
@@ -239,7 +239,7 @@
             <Container class="javax.swing.JPanel" name="AdminBtnPanel">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="d1" green="b4" id="Active Caption" palette="2" red="99" type="palette"/>
+                  <Color blue="66" green="66" red="0" type="rgb"/>
                 </Property>
               </Properties>
               <Events>
@@ -297,7 +297,7 @@
             <Container class="javax.swing.JPanel" name="HospBtnPanel">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="d1" green="b4" id="Active Caption" palette="2" red="99" type="palette"/>
+                  <Color blue="66" green="66" red="0" type="rgb"/>
                 </Property>
               </Properties>
               <Events>
@@ -357,7 +357,7 @@
         <Container class="javax.swing.JPanel" name="jPanel3">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="f2" green="c0" red="88" type="rgb"/>
+              <Color blue="99" green="99" red="0" type="rgb"/>
             </Property>
           </Properties>
           <Constraints>
