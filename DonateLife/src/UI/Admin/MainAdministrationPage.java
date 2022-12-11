@@ -42,53 +42,78 @@ public class MainAdministrationPage extends javax.swing.JPanel {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        lbl_Hosptitle = new javax.swing.JLabel();
         lbl_username = new javax.swing.JLabel();
         txtUsername = new javax.swing.JTextField();
         lbl_pswd = new javax.swing.JLabel();
         txtPassword = new javax.swing.JPasswordField();
         btn_login = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        lbl_Hosptitle = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lbl_Hosptitle.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        lbl_Hosptitle.setText("Administration");
-        jPanel1.add(lbl_Hosptitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 110, 210, -1));
-
-        lbl_username.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lbl_username.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lbl_username.setForeground(new java.awt.Color(255, 255, 255));
         lbl_username.setText("Username:");
-        jPanel1.add(lbl_username, new org.netbeans.lib.awtextra.AbsoluteConstraints(417, 227, -1, -1));
-        jPanel1.add(txtUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(417, 253, 197, -1));
+        jPanel1.add(lbl_username, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 380, -1, 20));
+        jPanel1.add(txtUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 400, 197, 20));
 
-        lbl_pswd.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lbl_pswd.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lbl_pswd.setForeground(new java.awt.Color(255, 255, 255));
         lbl_pswd.setText("Password:");
-        jPanel1.add(lbl_pswd, new org.netbeans.lib.awtextra.AbsoluteConstraints(417, 297, -1, -1));
-        jPanel1.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(417, 323, 197, -1));
+        jPanel1.add(lbl_pswd, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 450, -1, 20));
+        jPanel1.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 470, 197, 20));
 
-        btn_login.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btn_login.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btn_login.setText("Login");
         btn_login.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_loginActionPerformed(evt);
             }
         });
-        jPanel1.add(btn_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(417, 386, -1, -1));
+        jPanel1.add(btn_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 530, -1, 20));
+
+        jPanel2.setBackground(new java.awt.Color(0, 102, 153));
+
+        lbl_Hosptitle.setBackground(new java.awt.Color(255, 255, 255));
+        lbl_Hosptitle.setFont(new java.awt.Font("SansSerif", 1, 48)); // NOI18N
+        lbl_Hosptitle.setForeground(new java.awt.Color(255, 255, 255));
+        lbl_Hosptitle.setText("ADMINISTRATION");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lbl_Hosptitle, javax.swing.GroupLayout.PREFERRED_SIZE, 460, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lbl_Hosptitle)
+                .addContainerGap())
+        );
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 60, 420, 70));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/Admin/Medical-Wallpapers-HD-Free-download.jpg"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-25, -4, 1080, 710));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-25, -4, 1680, 860));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1057, Short.MAX_VALUE)
+            .addGap(0, 1655, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1057, Short.MAX_VALUE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 706, Short.MAX_VALUE)
+            .addGap(0, 856, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -115,6 +140,7 @@ public class MainAdministrationPage extends javax.swing.JPanel {
     private javax.swing.JButton btn_login;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel lbl_Hosptitle;
     private javax.swing.JLabel lbl_pswd;
     private javax.swing.JLabel lbl_username;
