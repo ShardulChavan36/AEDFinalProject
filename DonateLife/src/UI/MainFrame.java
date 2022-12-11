@@ -10,7 +10,7 @@ import UI.Admin.MainAdministrationPage;
 import UI.DonorBank.MainDonorBankPage;
 import UI.Hospital.MainHospitalPage;
 import UI.Lab.MainLabPage;
-import UI.TranportLogistics.MainLogisticsPage;
+import UI.TransportLogistics.MainLogisticsPage;
 
 import javax.swing.*;
 import java.awt.*;
@@ -26,7 +26,7 @@ import javax.mail.Transport;
 
 /**
  *
- * @author shreyasrai
+ * @author Smiti
  */
 public class MainFrame extends javax.swing.JFrame {
 
@@ -56,7 +56,7 @@ public class MainFrame extends javax.swing.JFrame {
         this.ecoSystem = dB4OUtil.retrieveSystem();
 //        sendMail();
 //        lblMa.setIcon(setIcon("/Users/ankitjagtap/Downloads/Hospital.GIF"));
-//        ImgLab1.setIcon(setIcon("/Users/shreyasrai/Desktop/MIS_AED/AED_INFO5100_Final_Project/AEDFinalProjectTry1/donate.jpg"));
+//        ImgLab1.setIcon(setIcon("/Users/harshaljaiswal/Desktop/MIS_AED/AED_INFO5100_Final_Project/AEDFinalProjectTry1/donate.jpg"));
 
     }
 
@@ -93,10 +93,10 @@ public class MainFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel10.setBackground(new java.awt.Color(54, 33, 89));
+        jPanel10.setBackground(new java.awt.Color(0, 204, 204));
         jPanel10.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        TransportBtnPanel.setBackground(new java.awt.Color(85, 65, 118));
+        TransportBtnPanel.setBackground(new java.awt.Color(0, 102, 102));
         TransportBtnPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 TransportBtnPaneljPanel4MouseClicked(evt);
@@ -105,7 +105,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8-handle-with-care-48.png"))); // NOI18N
 
-        jLabel4.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Gill Sans Ultra Bold", 1, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Logistics");
 
@@ -116,8 +116,8 @@ public class MainFrame extends javax.swing.JFrame {
             .addGroup(TransportBtnPanelLayout.createSequentialGroup()
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 237, Short.MAX_VALUE))
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 165, Short.MAX_VALUE))
         );
         TransportBtnPanelLayout.setVerticalGroup(
             TransportBtnPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -130,9 +130,9 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGap(14, 14, 14))
         );
 
-        jPanel10.add(TransportBtnPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 370, 50));
+        jPanel10.add(TransportBtnPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 370, 50));
 
-        DonorBankBtnPanel.setBackground(new java.awt.Color(85, 65, 118));
+        DonorBankBtnPanel.setBackground(new java.awt.Color(0, 102, 102));
         DonorBankBtnPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 DonorBankBtnPanelMouseClicked(evt);
@@ -141,7 +141,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8-charity-48.png"))); // NOI18N
 
-        jLabel6.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Gill Sans Ultra Bold", 1, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Donor Inventory");
 
@@ -152,8 +152,8 @@ public class MainFrame extends javax.swing.JFrame {
             .addGroup(DonorBankBtnPanelLayout.createSequentialGroup()
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 198, Short.MAX_VALUE))
+                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 90, Short.MAX_VALUE))
         );
         DonorBankBtnPanelLayout.setVerticalGroup(
             DonorBankBtnPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -166,9 +166,9 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGap(14, 14, 14))
         );
 
-        jPanel10.add(DonorBankBtnPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 370, -1));
+        jPanel10.add(DonorBankBtnPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 360, 370, -1));
 
-        LabBtnPanel.setBackground(new java.awt.Color(85, 65, 118));
+        LabBtnPanel.setBackground(new java.awt.Color(0, 102, 102));
         LabBtnPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 LabBtnPanelMouseClicked(evt);
@@ -177,7 +177,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8-lab-items-48.png"))); // NOI18N
 
-        jLabel8.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Gill Sans Ultra Bold", 1, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Laboratory");
 
@@ -188,8 +188,8 @@ public class MainFrame extends javax.swing.JFrame {
             .addGroup(LabBtnPanelLayout.createSequentialGroup()
                 .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 196, Short.MAX_VALUE))
+                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 156, Short.MAX_VALUE))
         );
         LabBtnPanelLayout.setVerticalGroup(
             LabBtnPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -202,9 +202,9 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGap(14, 14, 14))
         );
 
-        jPanel10.add(LabBtnPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 280, 370, 50));
+        jPanel10.add(LabBtnPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 500, 370, 50));
 
-        AdminBtnPanel.setBackground(new java.awt.Color(85, 65, 118));
+        AdminBtnPanel.setBackground(new java.awt.Color(0, 102, 102));
         AdminBtnPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 AdminBtnPanelMouseClicked(evt);
@@ -213,7 +213,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8-microsoft-admin-48.png"))); // NOI18N
 
-        jLabel14.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        jLabel14.setFont(new java.awt.Font("Gill Sans Ultra Bold", 1, 18)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
         jLabel14.setText("Administration");
 
@@ -224,21 +224,21 @@ public class MainFrame extends javax.swing.JFrame {
             .addGroup(AdminBtnPanelLayout.createSequentialGroup()
                 .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 201, Short.MAX_VALUE))
+                .addComponent(jLabel14)
+                .addGap(0, 131, Short.MAX_VALUE))
         );
         AdminBtnPanelLayout.setVerticalGroup(
             AdminBtnPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AdminBtnPanelLayout.createSequentialGroup()
-                .addContainerGap(19, Short.MAX_VALUE)
+                .addContainerGap(13, Short.MAX_VALUE)
                 .addComponent(jLabel14)
                 .addGap(14, 14, 14))
             .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        jPanel10.add(AdminBtnPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 330, 370, 50));
+        jPanel10.add(AdminBtnPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 660, 370, 50));
 
-        HospBtnPanel.setBackground(new java.awt.Color(85, 65, 118));
+        HospBtnPanel.setBackground(new java.awt.Color(0, 102, 102));
         HospBtnPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 HospBtnPanelMouseClicked(evt);
@@ -247,7 +247,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8-hospital-sign-48.png"))); // NOI18N
 
-        jLabel12.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        jLabel12.setFont(new java.awt.Font("Gill Sans Ultra Bold", 1, 18)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setText("Hospital");
 
@@ -270,18 +270,18 @@ public class MainFrame extends javax.swing.JFrame {
             .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        jPanel10.add(HospBtnPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, 370, 50));
+        jPanel10.add(HospBtnPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 370, 50));
 
         jSplitPane1.setLeftComponent(jPanel10);
 
-        jPanel3.setBackground(new java.awt.Color(110, 89, 222));
+        jPanel3.setBackground(new java.awt.Color(0, 153, 153));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel15.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel15.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel15.setFont(new java.awt.Font("Gill Sans Ultra Bold", 3, 54)); // NOI18N
         jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel15.setText("Organ Transplantation System");
-        jPanel3.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 60, 460, 58));
+        jLabel15.setText("Donate A Life");
+        jPanel3.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 60, 490, 58));
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8-close-50.png"))); // NOI18N
         jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -289,8 +289,11 @@ public class MainFrame extends javax.swing.JFrame {
                 jLabel9MouseClicked(evt);
             }
         });
-        jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 20, 58, 51));
-        jPanel3.add(gifLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 1, 1070, 780));
+        jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 20, 58, 51));
+
+        gifLabel.setBackground(new java.awt.Color(0, 153, 153));
+        gifLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/Hospital.gif"))); // NOI18N
+        jPanel3.add(gifLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, -10, 1070, 780));
 
         jSplitPane1.setRightComponent(jPanel3);
 
