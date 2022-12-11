@@ -5,23 +5,24 @@
 
 package model.Organization;
 
+import model.Enterprise.Enterprise;
+
 /**
  *
- * @author chava
+ * @author shreyasrai
  */
-public class Organization {
+public class Organization extends Enterprise{
     private String orgName;
     private String orgRegistrationNo;
     private String address;
     private String orgUsername;
-    private String password;
+    private String orgpassword;
 
-    public Organization(String orgName, String orgRegistrationNo, String address, String username, String password) {
+    public Organization(String enterpriseName, String registrationNo, String address, String username, String password,String orgName, String orgusername, String orgpassword) {
+        super(enterpriseName, registrationNo, address, username, password);
         this.orgName = orgName;
-        this.orgRegistrationNo = orgRegistrationNo;
-        this.address = address;
-        this.orgUsername = username;
-        this.password = password;
+        this.orgUsername = orgusername;
+        this.orgpassword = orgpassword;
     }
 
     public String getOrgName() {
@@ -56,13 +57,15 @@ public class Organization {
         this.orgUsername = orgUsername;
     }
 
-    public String getPassword() {
-        return password;
+    public String getOrgpassword() {
+        return orgpassword;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setOrgpassword(String orgpassword) {
+        this.orgpassword = orgpassword;
     }
+
+    
     
     
 
