@@ -60,11 +60,11 @@ public class MainDonorBankPage extends javax.swing.JPanel {
         jLabel1.setFont(new java.awt.Font("SansSerif", 1, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("DONOR BANK");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 30, -1, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 40, -1, -1));
 
         lbl_role.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lbl_role.setText("Role:");
-        add(lbl_role, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 160, -1, -1));
+        add(lbl_role, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 170, -1, -1));
 
         cmb_Role.setEditable(true);
         cmb_Role.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -74,17 +74,17 @@ public class MainDonorBankPage extends javax.swing.JPanel {
                 cmb_RoleActionPerformed(evt);
             }
         });
-        add(cmb_Role, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 190, 197, -1));
+        add(cmb_Role, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 200, 197, -1));
 
         lbl_username.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lbl_username.setText("Username:");
-        add(lbl_username, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 230, -1, -1));
-        add(txtUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 250, 197, -1));
+        add(lbl_username, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 240, -1, -1));
+        add(txtUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 260, 197, -1));
 
         lbl_pswd.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lbl_pswd.setText("Password:");
-        add(lbl_pswd, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 300, -1, -1));
-        add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 320, 197, -1));
+        add(lbl_pswd, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 310, -1, -1));
+        add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 330, 197, -1));
 
         btn_login.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btn_login.setText("Login");
@@ -93,7 +93,7 @@ public class MainDonorBankPage extends javax.swing.JPanel {
                 btn_loginActionPerformed(evt);
             }
         });
-        add(btn_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 390, 86, -1));
+        add(btn_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 400, 86, -1));
 
         btnSignin.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnSignin.setText("Sign Up");
@@ -102,10 +102,10 @@ public class MainDonorBankPage extends javax.swing.JPanel {
                 btnSigninActionPerformed(evt);
             }
         });
-        add(btnSignin, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 390, -1, -1));
+        add(btnSignin, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 400, -1, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/DonorBank/donor2.v4.jpg"))); // NOI18N
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 20, 1300, 750));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 40, 1300, 750));
     }// </editor-fold>//GEN-END:initComponents
 
     private void cmb_RoleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmb_RoleActionPerformed
