@@ -9,7 +9,7 @@ import model.DB4OUtil.DB4OUtil;
 import model.EcoSystem.EcoSystem;
 import model.Enterprise.Hospital.Hospital;
 import model.Enterprise.Hospital.Nurse;
-import model.Firebase.FirebaseHelper;
+//import model.Firebase.FirebaseHelper;
 import UI.MainFrame;
 import java.util.Date;
 import javax.swing.JFrame;
@@ -25,7 +25,7 @@ public class NurseSignIn extends javax.swing.JPanel {
      * Creates new form NurseSignIn
      */
     MainFrame mainFrame;
-    FirebaseHelper firebaseHelper;
+//    FirebaseHelper firebaseHelper;
     private EcoSystem ecoSystem;
     private DB4OUtil dB4OUtil;
     public NurseSignIn(MainFrame mainFrame, DB4OUtil dB4OUtil, EcoSystem ecoSystem) {
