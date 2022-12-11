@@ -113,7 +113,7 @@ public class MainLogisticsPage extends javax.swing.JPanel {
 
         jLabel2.setBackground(new java.awt.Color(153, 153, 153));
         jLabel2.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Logistics.jpg"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/TransportLogistics/Logistics.jpg"))); // NOI18N
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 80, 1390, -1));
     }// </editor-fold>//GEN-END:initComponents
 
