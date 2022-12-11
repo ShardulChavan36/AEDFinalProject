@@ -433,8 +433,8 @@ public class AdminReceiveOrgan extends javax.swing.JPanel {
             properties.setProperty("mail.smtp.socketFactory.fallback", "false");
             properties.setProperty("mail.smtp.port", "465");
             properties.setProperty("mail.smtp.socketFactory.port", "465");
-            String myAccountEmail = "xyz@gmail.com";
-            String password = "";
+            String myAccountEmail = "aedproj2022@gmail.com";
+            String password = "gesxjnjnaprmmyzy";
             Session session;
             session = Session.getInstance(properties, new javax.mail.Authenticator() {
                 @Override
@@ -442,7 +442,7 @@ public class AdminReceiveOrgan extends javax.swing.JPanel {
                     return new javax.mail.PasswordAuthentication(myAccountEmail, password);
                 }
             });
-            Message message = prepareMessage(mail,session, myAccountEmail, "abc@gmail.com", "msg", "sub");
+            Message message = prepareMessage(mail,session, myAccountEmail, "smiti.r.agrawal@gmail.com", "msg", "sub");
             Transport.send(message);
 // System.out.println("Successful sent");
         } catch (MessagingException ex) {
