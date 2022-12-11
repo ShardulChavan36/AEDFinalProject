@@ -219,15 +219,15 @@ public class AdministrationSplitPage extends javax.swing.JPanel {
 
     private void transplantMgmtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_transplantMgmtActionPerformed
         // TODO add your handling code here:
-//        ManageTransplant mt = new ManageTransplant(mainFrame, dB4OUtil, ecoSystem);
-//        jSplitPane1.setRightComponent(mt);
+        ManageTransplant mt = new ManageTransplant(mainFrame, dB4OUtil, ecoSystem);
+        jSplitPane1.setRightComponent(mt);
     }//GEN-LAST:event_transplantMgmtActionPerformed
 
     private void dispGraphActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dispGraphActionPerformed
         // TODO add your handling code here:
 //        ManageTransplant mt = new ManageTransplant(mainFrame, dB4OUtil, ecoSystem);
-//        Graphs mt = new Graphs(mainFrame, dB4OUtil, ecoSystem);
-//        jSplitPane1.setRightComponent(mt);
+        Graphs mt = new Graphs(mainFrame, dB4OUtil, ecoSystem);
+        jSplitPane1.setRightComponent(mt);
     }//GEN-LAST:event_dispGraphActionPerformed
 
     private void techMgmtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_techMgmtActionPerformed
