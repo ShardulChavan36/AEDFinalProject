@@ -169,7 +169,7 @@ public class DoctorLogin extends javax.swing.JPanel {
         });
         jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 460, -1, -1));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Hospital1.jpg"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/Hospital/WorkArea/Doctor/Hospital1.jpg"))); // NOI18N
         jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(-15, -34, 1720, 900));
 
         jTabbedPane1.addTab("Transplant History", jPanel2);

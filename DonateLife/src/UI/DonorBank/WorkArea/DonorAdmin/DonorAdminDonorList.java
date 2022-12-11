@@ -16,7 +16,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author piyush
+ * @author smiti
  */
 public class DonorAdminDonorList extends javax.swing.JPanel {
 

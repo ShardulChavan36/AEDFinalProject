@@ -17,7 +17,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Mayur
+ * @author smiti
  */
 public class DonorAdminDonateOrgan extends javax.swing.JPanel {
 
