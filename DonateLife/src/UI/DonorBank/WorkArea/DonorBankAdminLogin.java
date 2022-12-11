@@ -54,6 +54,7 @@ public class DonorBankAdminLogin extends javax.swing.JPanel {
         btn_logout = new javax.swing.JButton();
         btn_transplant1 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
 
         jPanel1.setBackground(new java.awt.Color(0, 153, 204));
 
@@ -114,15 +115,23 @@ public class DonorBankAdminLogin extends javax.swing.JPanel {
 
         jPanel2.setBackground(javax.swing.UIManager.getDefaults().getColor("Button.default.hoverBorderColor"));
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/DonorBank/WorkArea/donor2.v4.jpg"))); // NOI18N
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 800, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(62, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1237, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 527, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 905, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(113, Short.MAX_VALUE))
         );
 
         jSplitPane1.setRightComponent(jPanel2);
@@ -163,6 +172,7 @@ public class DonorBankAdminLogin extends javax.swing.JPanel {
     private javax.swing.JButton btn_donateOrgan;
     private javax.swing.JButton btn_logout;
     private javax.swing.JButton btn_transplant1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JSplitPane jSplitPane1;
