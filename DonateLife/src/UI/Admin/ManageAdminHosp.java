@@ -60,6 +60,7 @@ public class ManageAdminHosp extends javax.swing.JPanel {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         jPanel2 = new javax.swing.JPanel();
+        patientLogoutBtn1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         createHosp = new javax.swing.JButton();
@@ -99,13 +100,13 @@ public class ManageAdminHosp extends javax.swing.JPanel {
         doctorName = new javax.swing.JTextField();
         doctorContact = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
+        jDateChooser1 = new com.toedter.calendar.JDateChooser();
         jLabel10 = new javax.swing.JLabel();
         doctorSpecialization = new javax.swing.JTextField();
         jLabel14 = new javax.swing.JLabel();
         txtUsrName2 = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         doctorContact3 = new javax.swing.JTextField();
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
         txtState2 = new javax.swing.JTextField();
         txt_state2 = new javax.swing.JLabel();
         txt_Zip2 = new javax.swing.JLabel();
@@ -129,11 +130,11 @@ public class ManageAdminHosp extends javax.swing.JPanel {
         nurseName = new javax.swing.JTextField();
         nurseContact = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
+        jDateChooser2 = new com.toedter.calendar.JDateChooser();
         jLabel15 = new javax.swing.JLabel();
         txtUsrName3 = new javax.swing.JTextField();
         nurseGender = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
-        jDateChooser2 = new com.toedter.calendar.JDateChooser();
         viewNurse = new javax.swing.JButton();
         lbl_address3 = new javax.swing.JLabel();
         createNurse = new javax.swing.JButton();
@@ -150,13 +151,13 @@ public class ManageAdminHosp extends javax.swing.JPanel {
         patName = new javax.swing.JTextField();
         patContact = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
+        jDateChooser3 = new com.toedter.calendar.JDateChooser();
         jLabel17 = new javax.swing.JLabel();
         patUsrName4 = new javax.swing.JTextField();
         jLabel18 = new javax.swing.JLabel();
         patGender = new javax.swing.JTextField();
         patPwd = new javax.swing.JTextField();
         lbl_address7 = new javax.swing.JLabel();
-        jDateChooser3 = new com.toedter.calendar.JDateChooser();
         txtAdd4 = new javax.swing.JTextField();
         lbl_address4 = new javax.swing.JLabel();
         txt_City3 = new javax.swing.JLabel();
@@ -176,19 +177,29 @@ public class ManageAdminHosp extends javax.swing.JPanel {
         hospitalList2 = new javax.swing.JComboBox<>();
         lbl_name3 = new javax.swing.JLabel();
 
-        setPreferredSize(new java.awt.Dimension(2023, 1400));
+        setPreferredSize(new java.awt.Dimension(2023, 1600));
 
         jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
         jScrollPane1.setPreferredSize(new java.awt.Dimension(32767, 32767));
 
-        jPanel2.setBackground(new java.awt.Color(0, 102, 153));
+        jPanel2.setBackground(java.awt.SystemColor.activeCaption);
         jPanel2.setPreferredSize(new java.awt.Dimension(1200, 1200));
         jPanel2.setRequestFocusEnabled(false);
         jPanel2.setVerifyInputWhenFocusTarget(false);
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        patientLogoutBtn1.setBackground(javax.swing.UIManager.getDefaults().getColor("Button.borderColor"));
+        patientLogoutBtn1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        patientLogoutBtn1.setText("Logout");
+        patientLogoutBtn1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        patientLogoutBtn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                patientLogoutBtn1ActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jLabel1.setForeground(java.awt.Color.white);
-        jLabel1.setText("ADMIN HOSPITAL MANAGEMENT");
+        jLabel1.setText("Admin Hospital Management");
 
         jSeparator1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
 
@@ -229,15 +240,7 @@ public class ManageAdminHosp extends javax.swing.JPanel {
             new String [] {
                 "Hospital name", "User ID", "Registration No.", "Address", "Pswd"
             }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false, false
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
+        ));
         jScrollPane3.setViewportView(HospTable);
 
         txtFullName.addActionListener(new java.awt.event.ActionListener() {
@@ -416,15 +419,7 @@ public class ManageAdminHosp extends javax.swing.JPanel {
             new String [] {
                 "Doctor Name", "UserName", "Hospital Name", "Address", "Pswd", "Doctor Id"
             }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
+        ));
         jScrollPane5.setViewportView(DocTable);
 
         DocDets.setBackground(new java.awt.Color(184, 216, 246));
@@ -492,10 +487,10 @@ public class ManageAdminHosp extends javax.swing.JPanel {
                                     .addComponent(jLabel14))
                                 .addGap(60, 60, 60)
                                 .addGroup(DocDetsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(doctorName, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
                                     .addComponent(doctorContact)
-                                    .addComponent(txtUsrName2)
-                                    .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(txtUsrName2))))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -516,8 +511,8 @@ public class ManageAdminHosp extends javax.swing.JPanel {
                     .addComponent(jLabel11))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(DocDetsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel8)
-                    .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel8))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(DocDetsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel14)
@@ -526,7 +521,7 @@ public class ManageAdminHosp extends javax.swing.JPanel {
                 .addGroup(DocDetsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel10)
                     .addComponent(doctorSpecialization, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(7, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         txtState2.addActionListener(new java.awt.event.ActionListener() {
@@ -567,15 +562,7 @@ public class ManageAdminHosp extends javax.swing.JPanel {
             new String [] {
                 "Nurse Name", "User ID", "Hospital Name", "Address", "Pswd"
             }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false, false
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
+        ));
         jScrollPane4.setViewportView(nurseTable);
 
         jSeparator2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
@@ -713,13 +700,12 @@ public class ManageAdminHosp extends javax.swing.JPanel {
                     .addComponent(jLabel15)
                     .addComponent(jLabel16))
                 .addGap(30, 30, 30)
-                .addGroup(DocDets1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(DocDets1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(nurseGender)
-                        .addComponent(nurseName, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
-                        .addComponent(nurseContact, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(txtUsrName3, javax.swing.GroupLayout.Alignment.LEADING))
-                    .addComponent(jDateChooser2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(DocDets1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(nurseGender)
+                    .addComponent(jDateChooser2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(nurseName, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
+                    .addComponent(nurseContact, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtUsrName3, javax.swing.GroupLayout.Alignment.LEADING))
                 .addContainerGap())
         );
         DocDets1Layout.setVerticalGroup(
@@ -737,10 +723,10 @@ public class ManageAdminHosp extends javax.swing.JPanel {
                 .addGroup(DocDets1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(nurseGender, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel16))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(8, 8, 8)
                 .addGroup(DocDets1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel9)
-                    .addComponent(jDateChooser2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jDateChooser2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel9))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(DocDets1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel15)
@@ -902,8 +888,8 @@ public class ManageAdminHosp extends javax.swing.JPanel {
                                     .addComponent(jLabel13))
                                 .addGap(73, 73, 73)
                                 .addGroup(DocDets2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(patName, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jDateChooser3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(jDateChooser3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(patName, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(DocDets2Layout.createSequentialGroup()
                                 .addGroup(DocDets2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(lbl_address7)
@@ -928,8 +914,8 @@ public class ManageAdminHosp extends javax.swing.JPanel {
                     .addComponent(jLabel12))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(DocDets2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel13)
-                    .addComponent(jDateChooser3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jDateChooser3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel13))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(DocDets2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel17)
@@ -1065,7 +1051,9 @@ public class ManageAdminHosp extends javax.swing.JPanel {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGap(408, 408, 408)
                 .addComponent(jLabel1)
-                .addGap(1246, 1246, 1246))
+                .addGap(296, 296, 296)
+                .addComponent(patientLogoutBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(846, 846, 846))
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jSeparator1)
@@ -1254,13 +1242,15 @@ public class ManageAdminHosp extends javax.swing.JPanel {
                                                 .addComponent(patState, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addComponent(patCity, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                             .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 1533, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(patientLogoutBtn1))
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(32, 32, 32)
@@ -1329,7 +1319,7 @@ public class ManageAdminHosp extends javax.swing.JPanel {
                     .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(DocDets, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(DocDets, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(21, 21, 21)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1438,13 +1428,13 @@ public class ManageAdminHosp extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1303, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 2017, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1400, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1800, Short.MAX_VALUE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -1462,6 +1452,10 @@ public class ManageAdminHosp extends javax.swing.JPanel {
             model.addRow(row);
         }
     }
+    private void patientLogoutBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_patientLogoutBtn1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_patientLogoutBtn1ActionPerformed
+
     private void createHospActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createHospActionPerformed
         // TODO add your handling code here:
         String address = txtAdd.getText() + txtCity.getText() + txtState.getText() + txtZip.getText();
@@ -2285,6 +2279,7 @@ public class ManageAdminHosp extends javax.swing.JPanel {
     private javax.swing.JTextField patState;
     private javax.swing.JTextField patUsrName4;
     private javax.swing.JTextField patZip;
+    private javax.swing.JButton patientLogoutBtn1;
     private javax.swing.JTable patientTable;
     private javax.swing.JTextField txtAdd;
     private javax.swing.JTextField txtAdd1;

@@ -72,7 +72,7 @@ public class DocSignIn extends javax.swing.JPanel {
         txt_spc = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(0, 204, 204));
+        setBackground(javax.swing.UIManager.getDefaults().getColor("Button.default.hoverBorderColor"));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lbl_admintitle.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
@@ -229,8 +229,8 @@ public class DocSignIn extends javax.swing.JPanel {
         add(txt_spc, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 390, 216, 30));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/Hospital/Hospital1.jpg"))); // NOI18N
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, -30, 1420, 1190));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/Hospital/ThoughtWire-Smart-Hospital-02.jpg"))); // NOI18N
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -20, 1600, 1170));
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtFullNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFullNameActionPerformed

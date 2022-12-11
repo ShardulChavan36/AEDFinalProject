@@ -206,15 +206,15 @@ public class AdministrationSplitPage extends javax.swing.JPanel {
 
     private void dbMgmtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dbMgmtActionPerformed
         // TODO add your handling code here:
-//        ManageDonorInventory mdb = new ManageDonorInventory(mainFrame, dB4OUtil, ecoSystem);
-//        jSplitPane1.setRightComponent(mdb);
+        ManageDonorInventory mdb = new ManageDonorInventory(mainFrame, dB4OUtil, ecoSystem);
+        jSplitPane1.setRightComponent(mdb);
     }//GEN-LAST:event_dbMgmtActionPerformed
 
     private void logMgmtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logMgmtActionPerformed
         // TODO add your handling code here:
 
-//        ManageLogistics mdb = new ManageLogistics(mainFrame, dB4OUtil, ecoSystem);
-//        jSplitPane1.setRightComponent(mdb);
+        ManageLogistics mdb = new ManageLogistics(mainFrame, dB4OUtil, ecoSystem);
+        jSplitPane1.setRightComponent(mdb);
     }//GEN-LAST:event_logMgmtActionPerformed
 
     private void transplantMgmtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_transplantMgmtActionPerformed
@@ -232,8 +232,8 @@ public class AdministrationSplitPage extends javax.swing.JPanel {
 
     private void techMgmtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_techMgmtActionPerformed
         // TODO add your handling code here:
-//        ManageTech mtech = new ManageTech(mainFrame, dB4OUtil, ecoSystem);
-//        jSplitPane1.setRightComponent(mtech);
+        ManageTech mtech = new ManageTech(mainFrame, dB4OUtil, ecoSystem);
+        jSplitPane1.setRightComponent(mtech);
     }//GEN-LAST:event_techMgmtActionPerformed
 
  
