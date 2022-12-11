@@ -12,7 +12,7 @@ import UI.MainFrame;
 import java.util.Date;
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
-import model.Firebase.FirebaseHelper;
+//import model.Firebase.FirebaseHelper;
 
 /**
  *
@@ -25,7 +25,7 @@ public class DocSignIn extends javax.swing.JPanel {
      */
     
     MainFrame mainFrame;
-    FirebaseHelper firebaseHelper;
+//    FirebaseHelper firebaseHelper;
     private EcoSystem ecoSystem;
     private DB4OUtil dB4OUtil;
     public DocSignIn(MainFrame mainFrame, DB4OUtil dB4OUtil, EcoSystem ecoSystem) {

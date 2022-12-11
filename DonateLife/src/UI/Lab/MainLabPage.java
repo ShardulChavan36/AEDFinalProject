@@ -104,7 +104,7 @@ public class MainLabPage extends javax.swing.JPanel {
         });
         add(btnSignin, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 530, -1, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/laboratory.v1.jpg"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/Lab/laboratory.v1.jpg"))); // NOI18N
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1550, 770));
     }// </editor-fold>//GEN-END:initComponents
 
