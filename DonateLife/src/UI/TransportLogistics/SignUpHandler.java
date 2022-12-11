@@ -254,7 +254,7 @@ public class SignUpHandler extends javax.swing.JPanel {
         jPanel1.setBackground(javax.swing.UIManager.getDefaults().getColor("Button.default.focusColor"));
         add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 180, 380, 570));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Logistics.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/TransportLogistics/Logistics.jpg"))); // NOI18N
         jLabel1.setMaximumSize(new java.awt.Dimension(1080, 720));
         jLabel1.setMinimumSize(new java.awt.Dimension(1080, 720));
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, 1720, 970));
