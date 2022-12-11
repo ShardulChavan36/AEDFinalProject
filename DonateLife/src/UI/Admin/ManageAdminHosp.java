@@ -60,7 +60,6 @@ public class ManageAdminHosp extends javax.swing.JPanel {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         jPanel2 = new javax.swing.JPanel();
-        patientLogoutBtn1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         createHosp = new javax.swing.JButton();
@@ -182,24 +181,14 @@ public class ManageAdminHosp extends javax.swing.JPanel {
         jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
         jScrollPane1.setPreferredSize(new java.awt.Dimension(32767, 32767));
 
-        jPanel2.setBackground(java.awt.Color.gray);
+        jPanel2.setBackground(new java.awt.Color(0, 102, 153));
         jPanel2.setPreferredSize(new java.awt.Dimension(1200, 1200));
         jPanel2.setRequestFocusEnabled(false);
         jPanel2.setVerifyInputWhenFocusTarget(false);
 
-        patientLogoutBtn1.setBackground(javax.swing.UIManager.getDefaults().getColor("Button.borderColor"));
-        patientLogoutBtn1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        patientLogoutBtn1.setText("Logout");
-        patientLogoutBtn1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        patientLogoutBtn1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                patientLogoutBtn1ActionPerformed(evt);
-            }
-        });
-
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
         jLabel1.setForeground(java.awt.Color.white);
-        jLabel1.setText("Admin Hospital Management");
+        jLabel1.setText("ADMIN HOSPITAL MANAGEMENT");
 
         jSeparator1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
 
@@ -240,7 +229,15 @@ public class ManageAdminHosp extends javax.swing.JPanel {
             new String [] {
                 "Hospital name", "User ID", "Registration No.", "Address", "Pswd"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane3.setViewportView(HospTable);
 
         txtFullName.addActionListener(new java.awt.event.ActionListener() {
@@ -419,7 +416,15 @@ public class ManageAdminHosp extends javax.swing.JPanel {
             new String [] {
                 "Doctor Name", "UserName", "Hospital Name", "Address", "Pswd", "Doctor Id"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane5.setViewportView(DocTable);
 
         DocDets.setBackground(new java.awt.Color(184, 216, 246));
@@ -562,7 +567,15 @@ public class ManageAdminHosp extends javax.swing.JPanel {
             new String [] {
                 "Nurse Name", "User ID", "Hospital Name", "Address", "Pswd"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane4.setViewportView(nurseTable);
 
         jSeparator2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
@@ -1052,9 +1065,7 @@ public class ManageAdminHosp extends javax.swing.JPanel {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGap(408, 408, 408)
                 .addComponent(jLabel1)
-                .addGap(296, 296, 296)
-                .addComponent(patientLogoutBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(846, 846, 846))
+                .addGap(1246, 1246, 1246))
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jSeparator1)
@@ -1249,9 +1260,7 @@ public class ManageAdminHosp extends javax.swing.JPanel {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(patientLogoutBtn1))
+                .addComponent(jLabel1)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(32, 32, 32)
@@ -1428,7 +1437,9 @@ public class ManageAdminHosp extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1306, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1303, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1451,10 +1462,6 @@ public class ManageAdminHosp extends javax.swing.JPanel {
             model.addRow(row);
         }
     }
-    private void patientLogoutBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_patientLogoutBtn1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_patientLogoutBtn1ActionPerformed
-
     private void createHospActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createHospActionPerformed
         // TODO add your handling code here:
         String address = txtAdd.getText() + txtCity.getText() + txtState.getText() + txtZip.getText();
@@ -2278,7 +2285,6 @@ public class ManageAdminHosp extends javax.swing.JPanel {
     private javax.swing.JTextField patState;
     private javax.swing.JTextField patUsrName4;
     private javax.swing.JTextField patZip;
-    private javax.swing.JButton patientLogoutBtn1;
     private javax.swing.JTable patientTable;
     private javax.swing.JTextField txtAdd;
     private javax.swing.JTextField txtAdd1;
