@@ -12,7 +12,7 @@ import javax.swing.table.DefaultTableModel;
 import model.DB4OUtil.DB4OUtil;
 import model.EcoSystem.EcoSystem;
 import model.Enterprise.Hospital.Hospital;
-import model.Firebase.FirebaseHelper;
+//import model.Firebase.FirebaseHelper;
 import model.Enterprise.Hospital.Doctor;
 
 import model.Enterprise.Hospital.Nurse;
@@ -24,7 +24,7 @@ import model.Enterprise.Hospital.Patient;
  */
 public class ManageAdminHosp extends javax.swing.JPanel {
     MainFrame mainFrame;
-    FirebaseHelper firebaseHelper;
+//    FirebaseHelper firebaseHelper;
     private EcoSystem ecoSystem;
     private DB4OUtil dB4OUtil;
     /**
@@ -100,13 +100,13 @@ public class ManageAdminHosp extends javax.swing.JPanel {
         doctorName = new javax.swing.JTextField();
         doctorContact = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
         jLabel10 = new javax.swing.JLabel();
         doctorSpecialization = new javax.swing.JTextField();
         jLabel14 = new javax.swing.JLabel();
         txtUsrName2 = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         doctorContact3 = new javax.swing.JTextField();
+        jDateChooser1 = new com.toedter.calendar.JDateChooser();
         txtState2 = new javax.swing.JTextField();
         txt_state2 = new javax.swing.JLabel();
         txt_Zip2 = new javax.swing.JLabel();
@@ -130,11 +130,11 @@ public class ManageAdminHosp extends javax.swing.JPanel {
         nurseName = new javax.swing.JTextField();
         nurseContact = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
-        jDateChooser2 = new com.toedter.calendar.JDateChooser();
         jLabel15 = new javax.swing.JLabel();
         txtUsrName3 = new javax.swing.JTextField();
         nurseGender = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
+        jDateChooser2 = new com.toedter.calendar.JDateChooser();
         viewNurse = new javax.swing.JButton();
         lbl_address3 = new javax.swing.JLabel();
         createNurse = new javax.swing.JButton();
@@ -151,13 +151,13 @@ public class ManageAdminHosp extends javax.swing.JPanel {
         patName = new javax.swing.JTextField();
         patContact = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
-        jDateChooser3 = new com.toedter.calendar.JDateChooser();
         jLabel17 = new javax.swing.JLabel();
         patUsrName4 = new javax.swing.JTextField();
         jLabel18 = new javax.swing.JLabel();
         patGender = new javax.swing.JTextField();
         patPwd = new javax.swing.JTextField();
         lbl_address7 = new javax.swing.JLabel();
+        jDateChooser3 = new com.toedter.calendar.JDateChooser();
         txtAdd4 = new javax.swing.JTextField();
         lbl_address4 = new javax.swing.JLabel();
         txt_City3 = new javax.swing.JLabel();
@@ -487,10 +487,10 @@ public class ManageAdminHosp extends javax.swing.JPanel {
                                     .addComponent(jLabel14))
                                 .addGap(60, 60, 60)
                                 .addGroup(DocDetsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(doctorName, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
                                     .addComponent(doctorContact)
-                                    .addComponent(txtUsrName2))))
+                                    .addComponent(txtUsrName2)
+                                    .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -511,8 +511,8 @@ public class ManageAdminHosp extends javax.swing.JPanel {
                     .addComponent(jLabel11))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(DocDetsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel8))
+                    .addComponent(jLabel8)
+                    .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(DocDetsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel14)
@@ -521,7 +521,7 @@ public class ManageAdminHosp extends javax.swing.JPanel {
                 .addGroup(DocDetsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel10)
                     .addComponent(doctorSpecialization, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(7, Short.MAX_VALUE))
         );
 
         txtState2.addActionListener(new java.awt.event.ActionListener() {
@@ -700,12 +700,13 @@ public class ManageAdminHosp extends javax.swing.JPanel {
                     .addComponent(jLabel15)
                     .addComponent(jLabel16))
                 .addGap(30, 30, 30)
-                .addGroup(DocDets1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(nurseGender)
-                    .addComponent(jDateChooser2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(nurseName, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
-                    .addComponent(nurseContact, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtUsrName3, javax.swing.GroupLayout.Alignment.LEADING))
+                .addGroup(DocDets1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(DocDets1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(nurseGender)
+                        .addComponent(nurseName, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
+                        .addComponent(nurseContact, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(txtUsrName3, javax.swing.GroupLayout.Alignment.LEADING))
+                    .addComponent(jDateChooser2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
         DocDets1Layout.setVerticalGroup(
@@ -723,10 +724,10 @@ public class ManageAdminHosp extends javax.swing.JPanel {
                 .addGroup(DocDets1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(nurseGender, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel16))
-                .addGap(8, 8, 8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(DocDets1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jDateChooser2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel9))
+                    .addComponent(jLabel9)
+                    .addComponent(jDateChooser2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(DocDets1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel15)
@@ -888,8 +889,8 @@ public class ManageAdminHosp extends javax.swing.JPanel {
                                     .addComponent(jLabel13))
                                 .addGap(73, 73, 73)
                                 .addGroup(DocDets2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jDateChooser3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(patName, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(patName, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jDateChooser3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(DocDets2Layout.createSequentialGroup()
                                 .addGroup(DocDets2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(lbl_address7)
@@ -914,8 +915,8 @@ public class ManageAdminHosp extends javax.swing.JPanel {
                     .addComponent(jLabel12))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(DocDets2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jDateChooser3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel13))
+                    .addComponent(jLabel13)
+                    .addComponent(jDateChooser3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(DocDets2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel17)
@@ -1319,7 +1320,7 @@ public class ManageAdminHosp extends javax.swing.JPanel {
                     .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(DocDets, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(DocDets, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(21, 21, 21)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)

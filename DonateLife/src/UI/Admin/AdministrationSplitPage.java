@@ -6,7 +6,7 @@ package UI.Admin;
 
 import model.DB4OUtil.DB4OUtil;
 import model.EcoSystem.EcoSystem;
-import model.Firebase.FirebaseHelper;
+//import model.Firebase.FirebaseHelper;
 import UI.MainFrame;
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
@@ -21,7 +21,7 @@ public class AdministrationSplitPage extends javax.swing.JPanel {
      * Creates new form AdministrationSplitPage
      */
     MainFrame mainFrame;
-    FirebaseHelper firebaseHelper;
+//    FirebaseHelper firebaseHelper;
     private EcoSystem ecoSystem;
     private DB4OUtil dB4OUtil;
 
@@ -204,34 +204,34 @@ public class AdministrationSplitPage extends javax.swing.JPanel {
 
     private void dbMgmtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dbMgmtActionPerformed
         // TODO add your handling code here:
-        ManageDonorInventory mdb = new ManageDonorInventory(mainFrame, dB4OUtil, ecoSystem);
-        jSplitPane1.setRightComponent(mdb);
+//        ManageDonorInventory mdb = new ManageDonorInventory(mainFrame, dB4OUtil, ecoSystem);
+//        jSplitPane1.setRightComponent(mdb);
     }//GEN-LAST:event_dbMgmtActionPerformed
 
     private void logMgmtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logMgmtActionPerformed
         // TODO add your handling code here:
 
-        ManageLogistics mdb = new ManageLogistics(mainFrame, dB4OUtil, ecoSystem);
-        jSplitPane1.setRightComponent(mdb);
+//        ManageLogistics mdb = new ManageLogistics(mainFrame, dB4OUtil, ecoSystem);
+//        jSplitPane1.setRightComponent(mdb);
     }//GEN-LAST:event_logMgmtActionPerformed
 
     private void transplantMgmtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_transplantMgmtActionPerformed
         // TODO add your handling code here:
-        ManageTransplant mt = new ManageTransplant(mainFrame, dB4OUtil, ecoSystem);
-        jSplitPane1.setRightComponent(mt);
+//        ManageTransplant mt = new ManageTransplant(mainFrame, dB4OUtil, ecoSystem);
+//        jSplitPane1.setRightComponent(mt);
     }//GEN-LAST:event_transplantMgmtActionPerformed
 
     private void dispGraphActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dispGraphActionPerformed
         // TODO add your handling code here:
 //        ManageTransplant mt = new ManageTransplant(mainFrame, dB4OUtil, ecoSystem);
-        Graphs mt = new Graphs(mainFrame, dB4OUtil, ecoSystem);
-        jSplitPane1.setRightComponent(mt);
+//        Graphs mt = new Graphs(mainFrame, dB4OUtil, ecoSystem);
+//        jSplitPane1.setRightComponent(mt);
     }//GEN-LAST:event_dispGraphActionPerformed
 
     private void techMgmtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_techMgmtActionPerformed
         // TODO add your handling code here:
-        ManageTech mtech = new ManageTech(mainFrame, dB4OUtil, ecoSystem);
-        jSplitPane1.setRightComponent(mtech);
+//        ManageTech mtech = new ManageTech(mainFrame, dB4OUtil, ecoSystem);
+//        jSplitPane1.setRightComponent(mtech);
     }//GEN-LAST:event_techMgmtActionPerformed
 
  

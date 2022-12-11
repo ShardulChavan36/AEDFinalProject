@@ -6,7 +6,7 @@ package UI.Admin;
 
 import model.DB4OUtil.DB4OUtil;
 import model.EcoSystem.EcoSystem;
-import model.Firebase.FirebaseHelper;
+//import model.Firebase.FirebaseHelper;
 import UI.MainFrame;
 import javax.swing.JOptionPane;
 
@@ -20,7 +20,7 @@ public class MainAdministrationPage extends javax.swing.JPanel {
      * Creates new form AdministrationLoginPage
      */
     MainFrame mainScreen;
-    FirebaseHelper firebaseHelper;
+//    FirebaseHelper firebaseHelper;
     private EcoSystem ecoSystem;
     private DB4OUtil dB4OUtil;
 
