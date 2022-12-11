@@ -10,15 +10,17 @@ import java.util.Date;
 
 /**
  *
- * @author smiti
+ * @author shreyasrai
  */
 public class Technician extends User {
     
     private String labName;
+    public String orgName;
     
-    public Technician(String uname, String pswd, String id, String name, String add, String gender, String contactNo, Date dob,String labName) {
+    public Technician(String uname, String pswd, String id, String name, String add, String gender, String contactNo, Date dob,String labName,String orgName) {
         super(uname, pswd, id, name, add, gender, contactNo, dob);
         this.labName = labName;
+        this.orgName=orgName;
     }
 
     public String getLabName() {
@@ -28,6 +30,18 @@ public class Technician extends User {
     public void setLabName(String labName) {
         this.labName = labName;
     }
+
+    public String getOrgName() {
+        return orgName;
+    }
+
+    public void setOrgName(String orgName) {
+        this.orgName = orgName;
+    }
     
+    @Override
+    public String toString(){
+        return String.valueOf(name);
+    }
     
 }
