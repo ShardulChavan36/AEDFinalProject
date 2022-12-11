@@ -59,7 +59,7 @@ public class DonorBankAdminLogin extends javax.swing.JPanel {
         jPanel1.setBackground(new java.awt.Color(0, 153, 204));
 
         btn_donateOrgan.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btn_donateOrgan.setText("Donate Organ");
+        btn_donateOrgan.setText("Donate");
         btn_donateOrgan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_donateOrganActionPerformed(evt);
@@ -99,14 +99,14 @@ public class DonorBankAdminLogin extends javax.swing.JPanel {
 
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(96, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(465, Short.MAX_VALUE)
                 .addComponent(btn_donateOrgan)
                 .addGap(26, 26, 26)
                 .addComponent(btn_transplant1)
                 .addGap(26, 26, 26)
                 .addComponent(btn_logout)
-                .addGap(307, 307, 307))
+                .addGap(435, 435, 435))
         );
 
         jPanel1Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btn_donateOrgan, btn_logout, btn_transplant1});

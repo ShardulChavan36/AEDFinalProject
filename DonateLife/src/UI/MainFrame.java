@@ -92,10 +92,10 @@ public class MainFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel10.setBackground(new java.awt.Color(140, 195, 255));
+        jPanel10.setBackground(new java.awt.Color(0, 153, 153));
         jPanel10.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        TransportBtnPanel.setBackground(java.awt.SystemColor.activeCaption);
+        TransportBtnPanel.setBackground(new java.awt.Color(0, 102, 102));
         TransportBtnPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 TransportBtnPaneljPanel4MouseClicked(evt);
@@ -131,7 +131,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         jPanel10.add(TransportBtnPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 370, 50));
 
-        DonorBankBtnPanel.setBackground(java.awt.SystemColor.activeCaption);
+        DonorBankBtnPanel.setBackground(new java.awt.Color(0, 102, 102));
         DonorBankBtnPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 DonorBankBtnPanelMouseClicked(evt);
@@ -167,7 +167,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         jPanel10.add(DonorBankBtnPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 360, 370, -1));
 
-        LabBtnPanel.setBackground(java.awt.SystemColor.activeCaption);
+        LabBtnPanel.setBackground(new java.awt.Color(0, 102, 102));
         LabBtnPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 LabBtnPanelMouseClicked(evt);
@@ -203,7 +203,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         jPanel10.add(LabBtnPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 500, 370, 50));
 
-        AdminBtnPanel.setBackground(java.awt.SystemColor.activeCaption);
+        AdminBtnPanel.setBackground(new java.awt.Color(0, 102, 102));
         AdminBtnPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 AdminBtnPanelMouseClicked(evt);
@@ -237,7 +237,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         jPanel10.add(AdminBtnPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 660, 370, 50));
 
-        HospBtnPanel.setBackground(java.awt.SystemColor.activeCaption);
+        HospBtnPanel.setBackground(new java.awt.Color(0, 102, 102));
         HospBtnPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 HospBtnPanelMouseClicked(evt);
@@ -273,7 +273,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         jSplitPane1.setLeftComponent(jPanel10);
 
-        jPanel3.setBackground(new java.awt.Color(136, 192, 242));
+        jPanel3.setBackground(new java.awt.Color(0, 153, 153));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel15.setBackground(new java.awt.Color(255, 255, 255));
