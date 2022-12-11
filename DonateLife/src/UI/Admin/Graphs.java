@@ -6,7 +6,7 @@ package UI.Admin;
 
 import model.DB4OUtil.DB4OUtil;
 import model.EcoSystem.EcoSystem;
-import model.Firebase.FirebaseHelper;
+//import model.Firebase.FirebaseHelper;
 import model.Organization.DonateEntity;
 import UI.MainFrame;
 import java.awt.Dimension;
