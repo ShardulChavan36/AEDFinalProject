@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author harshaljaiswal
+ * @author  Shardul
  */
 public class DonorInventory extends Enterprise {
 
@@ -49,7 +49,10 @@ public class DonorInventory extends Enterprise {
     public void setOrgandirectory(ArrayList<Organ> organdirectory) {
         this.organdirectory = organdirectory;
     }
-
+@Override
+    public String toString(){
+        return String.valueOf(enterpriseName);
+    }
 
 
 }

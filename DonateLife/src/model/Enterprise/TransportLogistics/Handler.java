@@ -28,6 +28,10 @@ public class Handler extends User {
     public void setVehicle(Vehicle vehicle) {
         this.vehicle = vehicle;
     }
+    @Override
+    public String toString(){
+        return String.valueOf(name);
+    }
   
     
 }

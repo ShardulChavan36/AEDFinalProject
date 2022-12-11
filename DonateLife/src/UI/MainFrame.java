@@ -55,8 +55,7 @@ public class MainFrame extends javax.swing.JFrame {
         this.setSize(1200, 750);
         this.ecoSystem = dB4OUtil.retrieveSystem();
 //        sendMail();
-//        lblMa.setIcon(setIcon("/Users/ankitjagtap/Downloads/Hospital.GIF"));
-//        ImgLab1.setIcon(setIcon("/Users/harshaljaiswal/Desktop/MIS_AED/AED_INFO5100_Final_Project/AEDFinalProjectTry1/donate.jpg"));
+
 
     }
 

@@ -1529,8 +1529,8 @@ public class ManageAdminHosp extends javax.swing.JPanel {
                 row[0] = d;
                 row[1] = d.getEmaildId();
                 row[2] = d.getHospname();
-                row[4] = d.getAdd();
-                row[3] = d.getPswd();
+                row[3] = d.getAdd();
+                row[4] = d.getPswd();
                 model.addRow(row);
             }
 

@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Mayur
+ * @author shreyasrai
  */
 public class MainLogisticsPage extends javax.swing.JPanel {
 

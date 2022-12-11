@@ -6,7 +6,7 @@ package model.Enterprise.DonorInventory;
 
 /**
  *
- * @author Mayur
+ * @author shreyasrai
  */
 public class Blood {
     
