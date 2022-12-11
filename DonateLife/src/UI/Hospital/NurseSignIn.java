@@ -161,6 +161,7 @@ public class NurseSignIn extends javax.swing.JPanel {
 
         lbl_address.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lbl_address.setText("Address:");
+        lbl_address.setOpaque(true);
         add(lbl_address, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 560, -1, -1));
 
         txtZip.addActionListener(new java.awt.event.ActionListener() {
@@ -245,9 +246,10 @@ public class NurseSignIn extends javax.swing.JPanel {
         add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 440, -1, -1));
         add(txtContact, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 430, 216, 30));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/Hospital/Hospital1.jpg"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/Hospital/ThoughtWire-Smart-Hospital-02.jpg"))); // NOI18N
         jLabel4.setText("jLabel4");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 1440, 1130));
+        jLabel4.setOpaque(true);
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1600, 1150));
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtNoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNoActionPerformed

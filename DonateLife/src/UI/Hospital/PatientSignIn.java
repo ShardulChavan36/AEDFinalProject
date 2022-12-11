@@ -267,8 +267,8 @@ public class PatientSignIn extends javax.swing.JPanel {
         add(lbl_hosplist, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 340, -1, -1));
 
         jLabel1.setBackground(new java.awt.Color(0, 204, 204));
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/Hospital/Hospital1.jpg"))); // NOI18N
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 3850, 930));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/Hospital/ThoughtWire-Smart-Hospital-02.jpg"))); // NOI18N
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 3850, 1010));
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtFullNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFullNameActionPerformed

@@ -105,7 +105,8 @@ public class MainHospitalPage extends javax.swing.JPanel {
         lbl_role.setText("Role:");
         jPanel1.add(lbl_role, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 360, 140, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/Hospital/Hospital1.jpg"))); // NOI18N
+        jLabel2.setBackground(new java.awt.Color(255, 255, 255,10));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/Hospital/ThoughtWire-Smart-Hospital-02.jpg"))); // NOI18N
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, -10, 1220, 1110));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

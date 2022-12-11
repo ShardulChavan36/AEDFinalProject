@@ -292,7 +292,14 @@ public void addHandler(Handler handler) {
             }
         }
     }
-
+    public void deleteTech(String donorName) {
+            for (Technician n : techdirectory) {
+                if (n.getEmaildId().equals(donorName)) {
+                    techdirectory.remove(n);
+                    return;
+                }
+            }
+        }
     public Object loginCheck(String usr, String pass) {
 
         for (Doctor d : doctordirectory) {
