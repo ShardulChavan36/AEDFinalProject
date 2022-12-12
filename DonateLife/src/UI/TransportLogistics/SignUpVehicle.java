@@ -14,7 +14,7 @@ import javax.swing.SwingUtilities;
 
 /**
  *
- * @author Mayur
+ * @author  Shardul
  */
 public class SignUpVehicle extends javax.swing.JPanel {
 

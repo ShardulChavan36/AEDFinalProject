@@ -9,7 +9,7 @@ import java.util.Date;
 
 /**
  *
- * @author Mayur
+ * @author shreyasrai
  */
 public class DonorDetails extends User {
 
@@ -36,6 +36,9 @@ public class DonorDetails extends User {
     public void setMedicalHis(String medicalHis) {
         this.medicalHis = medicalHis;
     }
-    
+    @Override
+    public String toString(){
+        return String.valueOf(name);
+    }
     
 }

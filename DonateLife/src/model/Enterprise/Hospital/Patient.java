@@ -38,5 +38,9 @@ public class Patient extends User{
     public void setDiagnosis(String diagnosis) {
         this.diagnosis = diagnosis;
     }
+    @Override
+    public String toString(){
+        return String.valueOf(name);
+    }
      
 }

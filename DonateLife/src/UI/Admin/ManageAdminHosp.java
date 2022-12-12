@@ -1519,18 +1519,19 @@ public class ManageAdminHosp extends javax.swing.JPanel {
 
     }
     private void populateNurseTable(ArrayList<Nurse> nurse, String hosp) {
+        System.out.println("In func"+hosp);
         DefaultTableModel model = (DefaultTableModel) nurseTable.getModel();
         model.setRowCount(0);
 
         for (Nurse d : nurse) {
-
+            System.out.println(d.getHospname());
             Object[] row = new Object[6];
             if (d.getHospname().equals(hosp)) {
                 row[0] = d;
                 row[1] = d.getEmaildId();
                 row[2] = d.getHospname();
-                row[4] = d.getAdd();
-                row[3] = d.getPswd();
+                row[3] = d.getAdd();
+                row[4] = d.getPswd();
                 model.addRow(row);
             }
 

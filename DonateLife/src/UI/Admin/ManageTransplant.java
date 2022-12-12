@@ -102,13 +102,16 @@ public class ManageTransplant extends javax.swing.JPanel {
             return;
         }
         DefaultTableModel model = (DefaultTableModel) tb1.getModel();
-        String id = model.getValueAt(selectedRow, 12).toString();
-        System.out.println(" handler uname: " + id);
+        DonateEntity d = (DonateEntity)model.getValueAt(selectedRow, 12);
+        System.out.println(" handler uname: " + d.getEntityName());
         
         for(DonateEntity de : ecoSystem.getDonateEntityList()){
             try{
-            if(de.getId().equals(id)){
-                de.setStatus(model.getValueAt(selectedRow, 3).toString());
+                System.out.println(de.getId());
+                System.out.println(d.getId());
+            if(de.getId().equals(d.getId())){
+                
+                d.setStatus(model.getValueAt(selectedRow, 3).toString());
             }
             }catch(Exception e){
                 
@@ -174,7 +177,7 @@ public class ManageTransplant extends javax.swing.JPanel {
 
             }
             try {
-            row[12] = d.getId();
+            row[12] = d;
             }catch (Exception e) {
 
             }

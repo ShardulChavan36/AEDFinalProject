@@ -33,8 +33,9 @@ public class NurseSignIn extends javax.swing.JPanel {
         this.mainFrame = mainFrame;
         this.dB4OUtil = dB4OUtil;
         this.ecoSystem = ecoSystem;
+       
         for(Hospital h: ecoSystem.getHospitaldirectory().getHospitalList()){
-            cmb_gender.addItem(h.getEnterpriseName());
+            hospitalList1.addItem(h.getEnterpriseName());
         }
     }
 
@@ -66,12 +67,14 @@ public class NurseSignIn extends javax.swing.JPanel {
         btn_back = new javax.swing.JButton();
         lbl_registeryNum = new javax.swing.JLabel();
         lbl_name = new javax.swing.JLabel();
-        cmb_gender = new javax.swing.JComboBox<>();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         txtDOB = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         txtContact = new javax.swing.JTextField();
+        hospitalList1 = new javax.swing.JComboBox<>();
+        lbl_name2 = new javax.swing.JLabel();
+        nurseGender = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(0, 204, 204));
@@ -195,7 +198,7 @@ public class NurseSignIn extends javax.swing.JPanel {
                 btn_signupActionPerformed(evt);
             }
         });
-        add(btn_signup, new org.netbeans.lib.awtextra.AbsoluteConstraints(757, 720, 100, -1));
+        add(btn_signup, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 780, 100, -1));
 
         lbl_admintitle.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
         lbl_admintitle.setText("NURSE PROFILE");
@@ -208,7 +211,7 @@ public class NurseSignIn extends javax.swing.JPanel {
                 btn_backActionPerformed(evt);
             }
         });
-        add(btn_back, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 720, 90, -1));
+        add(btn_back, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 780, 90, -1));
 
         lbl_registeryNum.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lbl_registeryNum.setText("Registered No:");
@@ -217,14 +220,6 @@ public class NurseSignIn extends javax.swing.JPanel {
         lbl_name.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lbl_name.setText("Name:");
         add(lbl_name, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 280, -1, -1));
-
-        cmb_gender.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] {  }));
-        cmb_gender.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cmb_genderActionPerformed(evt);
-            }
-        });
-        add(cmb_gender, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 470, 216, 30));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setText("Gender:");
@@ -245,6 +240,30 @@ public class NurseSignIn extends javax.swing.JPanel {
         jLabel3.setText("Contact:");
         add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 440, -1, -1));
         add(txtContact, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 430, 216, 30));
+
+        hospitalList1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] {  }));
+        hospitalList1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                hospitalList1ActionPerformed(evt);
+            }
+        });
+        add(hospitalList1, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 720, 220, -1));
+
+        lbl_name2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lbl_name2.setText("Hospital Name:");
+        add(lbl_name2, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 720, -1, -1));
+
+        nurseGender.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nurseGenderActionPerformed(evt);
+            }
+        });
+        nurseGender.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                nurseGenderKeyTyped(evt);
+            }
+        });
+        add(nurseGender, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 470, 220, 30));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/Hospital/ThoughtWire-Smart-Hospital-02.jpg"))); // NOI18N
         jLabel4.setText("jLabel4");
@@ -367,7 +386,7 @@ public class NurseSignIn extends javax.swing.JPanel {
     private void btn_signupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_signupActionPerformed
         // TODO add your handling code here:
         String address = txtAdd.getText() + txtCity.getText() + txtState.getText() + txtZip.getText();
-        Nurse nurse = new Nurse(txtUsrName.getText(), txtPass.getText(), "idid", txtFullName.getText(), address, cmb_gender.getSelectedItem().toString(), txtContact.getText(),new Date() ,"hospitalList");
+        Nurse nurse = new Nurse(txtUsrName.getText(), txtPass.getText(), "idid", txtFullName.getText(), address, nurseGender.getText(), txtContact.getText(),new Date() ,hospitalList1.getSelectedItem().toString());
         ecoSystem.addNurse(nurse);
         dB4OUtil.storeSystem(ecoSystem);
         
@@ -383,19 +402,27 @@ public class NurseSignIn extends javax.swing.JPanel {
         suc.setVisible(true);
     }//GEN-LAST:event_btn_backActionPerformed
 
-    private void cmb_genderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmb_genderActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cmb_genderActionPerformed
-
     private void txtDOBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDOBActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtDOBActionPerformed
+
+    private void hospitalList1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hospitalList1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_hospitalList1ActionPerformed
+
+    private void nurseGenderKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_nurseGenderKeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nurseGenderKeyTyped
+
+    private void nurseGenderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nurseGenderActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nurseGenderActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_back;
     private javax.swing.JButton btn_signup;
-    private javax.swing.JComboBox<String> cmb_gender;
+    private javax.swing.JComboBox<String> hospitalList1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -403,9 +430,11 @@ public class NurseSignIn extends javax.swing.JPanel {
     private javax.swing.JLabel lbl_address;
     private javax.swing.JLabel lbl_admintitle;
     private javax.swing.JLabel lbl_name;
+    private javax.swing.JLabel lbl_name2;
     private javax.swing.JLabel lbl_pswd;
     private javax.swing.JLabel lbl_registeryNum;
     private javax.swing.JLabel lbl_uname;
+    private javax.swing.JTextField nurseGender;
     private javax.swing.JTextField txtAdd;
     private javax.swing.JTextField txtCity;
     private javax.swing.JTextField txtContact;

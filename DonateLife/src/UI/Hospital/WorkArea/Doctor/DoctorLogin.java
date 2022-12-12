@@ -110,8 +110,10 @@ public class DoctorLogin extends javax.swing.JPanel {
         });
         jPanel1.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 480, -1, -1));
 
+
         jLabel3.setBackground(new java.awt.Color(255, 204, 204));
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Hospital1.jpg"))); // NOI18N
+
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -90, 1620, 1030));
 
         jTabbedPane1.addTab("Patient List", jPanel1);
