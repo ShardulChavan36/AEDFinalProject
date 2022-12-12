@@ -13,8 +13,10 @@ import model.Enterprise.Enterprise;
  */
 public class FundRaisers extends Enterprise{
     
-    public FundRaisers(String enterpriseName, String registrationNo, String address, String username, String password) {
+    private String type;
+    public FundRaisers(String type, String enterpriseName, String registrationNo, String address, String username, String password) {
         super(enterpriseName, registrationNo, address, username, password);
+        this.type = type;
     }
     
 }
