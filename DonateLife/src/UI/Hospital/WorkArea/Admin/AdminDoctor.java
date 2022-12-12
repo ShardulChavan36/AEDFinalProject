@@ -354,7 +354,7 @@ public class AdminDoctor extends javax.swing.JPanel {
                 .addContainerGap(110, Short.MAX_VALUE))
         );
 
-        add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 350, 380, 260));
+        add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 350, 380, 260));
         jPanel6.getAccessibleContext().setAccessibleParent(jScrollPane1);
 
         doctorViewBtn.setBackground(new java.awt.Color(204, 204, 204));

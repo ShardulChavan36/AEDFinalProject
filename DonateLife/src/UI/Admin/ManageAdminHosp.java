@@ -7,6 +7,7 @@ package UI.Admin;
 import UI.MainFrame;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import model.DB4OUtil.DB4OUtil;
@@ -1458,6 +1459,9 @@ public class ManageAdminHosp extends javax.swing.JPanel {
 
     private void createHospActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createHospActionPerformed
         // TODO add your handling code here:
+        boolean valid = validateData();
+        
+        if (valid){
         String address = txtAdd.getText() + txtCity.getText() + txtState.getText() + txtZip.getText();
         Hospital hosp = new Hospital(txtFullName.getText(), txtNo.getText(), address, txtUsrName.getText(), txtPass.getText());
         System.out.println("Hospital"+hosp.getUsername());
@@ -1468,6 +1472,16 @@ public class ManageAdminHosp extends javax.swing.JPanel {
         }
         dB4OUtil.storeSystem(ecoSystem);
         populateTable();
+                txtAdd.setText("");
+        txtCity.setText("");
+        txtState.setText("");
+        txtZip.setText("");
+        txtFullName.setText("");
+        txtNo.setText("");
+        txtUsrName.setText("");
+        txtPass.setText("");
+        }
+
     }//GEN-LAST:event_createHospActionPerformed
 
     private void viewHospActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewHospActionPerformed
@@ -1561,6 +1575,187 @@ public class ManageAdminHosp extends javax.swing.JPanel {
         }
 
     }
+        private boolean validateDatad() {
+                
+                if(txtZip2.getText().length() < 1 || txtZip2.getText().startsWith("-") || !txtZip2.getText().matches("[0-9]+")){
+                                    JOptionPane.showMessageDialog(this, "Improper ZIP");
+                                    return false;
+
+        }
+       
+ 
+                                if (txtUsrName2.getText().length() < 1) {
+            JOptionPane.showMessageDialog(this, "Name cannot be null");
+            return false;
+        }
+                                if (doctorName.getText().length() < 1) {
+            JOptionPane.showMessageDialog(this, "Name cannot be null");
+            return false;
+        }
+           if (txtAdd1.getText().length() < 1 || txtAdd1.getText().matches("[0-9]")) {
+            JOptionPane.showMessageDialog(this, "Enter correct address");
+            return false;
+        }
+  
+                        if (txtCity1.getText().length() < 1 || txtCity1.getText().matches("[0-9]")) {
+            JOptionPane.showMessageDialog(this, "Enter valid City");
+            return false;
+        }
+                                                if (txtState2.getText().length() < 1 || txtState2.getText().matches("[0-9]")) {
+            JOptionPane.showMessageDialog(this, "Enter valid state");
+            return false;
+        }
+                                                                       if (doctorContact.getText().length() < 1 || !doctorContact.getText().matches("[0-9]+") || doctorContact.getText().length() != 10) {
+            JOptionPane.showMessageDialog(this, "Enter proper 10 digit  Number");
+            return false;
+        }
+
+                               if (doctorContact3.getText().length() < 1 || doctorContact3.getText().matches("[0-9]")) {
+            JOptionPane.showMessageDialog(this, "Enter Valid Gender");
+            return false;
+        }
+
+           if (doctorSpecialization.getText().length() < 1 || doctorSpecialization.getText().matches("[0-9]")) {
+            JOptionPane.showMessageDialog(this, "Enter Speciality");
+            return false;
+        }
+                       
+                     
+                return true;
+    }
+    private boolean validateData() {
+                
+                if(txtZip.getText().length() < 1 || txtZip.getText().startsWith("-") || !txtZip.getText().matches("[0-9]+")){
+                                    JOptionPane.showMessageDialog(this, "Improper ZIP");
+                                    return false;
+
+        }
+                if(txtNo.getText().length() < 1 || txtNo.getText().startsWith("-") || !txtNo.getText().matches("[0-9]+")){
+                                    JOptionPane.showMessageDialog(this, "Improper ZIP");
+                                    return false;
+
+        }
+       
+ 
+                                if (txtFullName.getText().length() < 1) {
+            JOptionPane.showMessageDialog(this, "Name cannot be null");
+            return false;
+        }
+           if (txtAdd.getText().length() < 1 || txtAdd.getText().matches("[0-9]")) {
+            JOptionPane.showMessageDialog(this, "Enter correct address");
+            return false;
+        }
+  
+                        if (txtCity.getText().length() < 1 || txtCity.getText().matches("[0-9]")) {
+            JOptionPane.showMessageDialog(this, "Enter valid City");
+            return false;
+        }
+                                                if (txtState.getText().length() < 1 || txtState.getText().matches("[0-9]")) {
+            JOptionPane.showMessageDialog(this, "Enter valid state");
+            return false;
+        }
+                       
+                     
+                return true;
+    }
+    private boolean validateDataP() {
+               
+                if(patZip.getText().length() < 1 || patZip.getText().startsWith("-") || !patZip.getText().matches("[0-9]+")){
+                                    JOptionPane.showMessageDialog(this, "Enter Valid ZIP Code");
+                                    return false;
+
+
+
+       }
+                if(patContact.getText().length() < 1 || patContact.getText().startsWith("-") || !patContact.getText().matches("[0-9]+")){
+                                    JOptionPane.showMessageDialog(this, "Enter Valid phone number");
+                                    return false;
+
+
+
+       }        
+       
+                               if (txtAdd4.getText().length() < 1 || txtAdd4.getText().matches("[0-9]")) {
+            JOptionPane.showMessageDialog(this, "Enter Valid Address");
+            return false;
+        }
+                               if (patCity.getText().length() < 1 || patCity.getText().matches("[0-9]")) {
+            JOptionPane.showMessageDialog(this, "Enter Valid City");
+            return false;
+        }
+                               if (patState.getText().length() < 1 || patState.getText().matches("[0-9]")) {
+            JOptionPane.showMessageDialog(this, "Enter Valid State");
+            return false;
+        }                       
+                                if (patUsrName4.getText().length() < 1) {
+            JOptionPane.showMessageDialog(this, "Enter Valid UserName");
+            return false;
+        }
+        
+                        if (patName.getText().length() < 1 || patName.getText().matches("[0-9]")) {
+            JOptionPane.showMessageDialog(this, "Enter Valid Name");
+            return false;
+        }
+                         if (patPwd.getText().length() < 1) {
+            JOptionPane.showMessageDialog(this, "Enter Password");
+            return false;
+        }
+                         if (patGender.getText().length() < 1) {
+            JOptionPane.showMessageDialog(this, "Enter Gender");
+            return false;
+        }               
+                     
+                return true;
+                
+    }
+    
+    private boolean validateDatan() {
+                
+                if(txtZip3.getText().length() < 1 || txtZip3.getText().startsWith("-") || !txtZip3.getText().matches("[0-9]+")){
+                                    JOptionPane.showMessageDialog(this, "Improper ZIP");
+                                    return false;
+
+        }
+       
+ 
+                                if (txtUsrName3.getText().length() < 1) {
+            JOptionPane.showMessageDialog(this, "Name cannot be null");
+            return false;
+        }
+                                if (nurseName.getText().length() < 1) {
+            JOptionPane.showMessageDialog(this, "Name cannot be null");
+            return false;
+        }
+           if (txtAdd6.getText().length() < 1 || txtAdd6.getText().matches("[0-9]")) {
+            JOptionPane.showMessageDialog(this, "Enter correct address");
+            return false;
+        }
+  
+                        if (txtCity2.getText().length() < 1 || txtCity2.getText().matches("[0-9]")) {
+            JOptionPane.showMessageDialog(this, "Enter valid City");
+            return false;
+        }
+                                                if (txtState3.getText().length() < 1 || txtState3.getText().matches("[0-9]")) {
+            JOptionPane.showMessageDialog(this, "Enter valid state");
+            return false;
+        }
+                                                                       if (nurseContact.getText().length() < 1 || !nurseContact.getText().matches("[0-9]+") || nurseContact.getText().length() != 10) {
+            JOptionPane.showMessageDialog(this, "Enter proper 10 digit  Number");
+            return false;
+        }
+
+                               if (nurseGender.getText().length() < 1 || nurseGender.getText().matches("[0-9]")) {
+            JOptionPane.showMessageDialog(this, "Enter Valid Gender");
+            return false;
+        }
+
+
+                       
+                     
+                return true;
+    }
+   
+    
     private void txtFullNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFullNameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtFullNameActionPerformed
@@ -1631,6 +1826,9 @@ public class ManageAdminHosp extends javax.swing.JPanel {
 
     private void createDocActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createDocActionPerformed
         // TODO add your handling code here:
+        boolean valid = validateDatad();
+        
+        if (valid){
         String randomEncId;
         randomEncId=String.valueOf(Math.random()*999+100);
         
@@ -1648,6 +1846,18 @@ public class ManageAdminHosp extends javax.swing.JPanel {
         dB4OUtil.storeSystem(ecoSystem);
         System.out.println("Doctor added");
         populateDoctorTable(ecoSystem.getDoctordirectory(), hospitalList.getSelectedItem().toString());
+        
+        txtAdd1.setText("");
+        txtCity1.setText("");
+        txtState2.setText("");
+        txtZip2.setText("");
+        txtUsrName2.setText("");
+        txtAdd5.setText("");
+        doctorName.setText("");
+        doctorContact3.setText("");
+         doctorContact.setText("");
+        doctorSpecialization.setText("");
+        }
     }//GEN-LAST:event_createDocActionPerformed
 
     private void updateDocActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateDocActionPerformed
@@ -1684,7 +1894,16 @@ public class ManageAdminHosp extends javax.swing.JPanel {
         dB4OUtil.storeSystem(ecoSystem);
         System.out.println("Doctor Updated");
         populateDoctorTable(ecoSystem.getDoctordirectory(), hospitalList.getSelectedItem().toString());
-       
+       txtAdd1.setText("");
+        txtCity1.setText("");
+        txtState2.setText("");
+        txtZip2.setText("");
+        txtUsrName2.setText("");
+        txtAdd5.setText("");
+        doctorName.setText("");
+        doctorContact3.setText("");
+         doctorContact.setText("");
+        doctorSpecialization.setText("");
         
     }//GEN-LAST:event_updateDocActionPerformed
 
@@ -1822,6 +2041,14 @@ public class ManageAdminHosp extends javax.swing.JPanel {
         }
         dB4OUtil.storeSystem(ecoSystem);
         populateTable();
+        txtAdd.setText("");
+        txtCity.setText("");
+        txtState.setText("");
+        txtZip.setText("");
+        txtFullName.setText("");
+        txtNo.setText("");
+        txtUsrName.setText("");
+        txtPass.setText("");
     }//GEN-LAST:event_updateHospActionPerformed
 
     private void nurseNameKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_nurseNameKeyTyped
@@ -1901,10 +2128,23 @@ public class ManageAdminHosp extends javax.swing.JPanel {
         dB4OUtil.storeSystem(ecoSystem);
         System.out.println("Nurse Updated");
         populateNurseTable(ecoSystem.getNursedirectory(), hospitalList.getSelectedItem().toString());
+        txtAdd3.setText("");
+        txtCity2.setText("");
+        txtState3.setText("");
+        txtZip3.setText("");
+        txtUsrName3.setText("");
+        txtAdd6.setText("");
+        nurseName.setText("");
+        nurseGender.setText("");
+        nurseContact.setText("");
     }//GEN-LAST:event_updateNurseActionPerformed
 
+    
     private void createNurseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createNurseActionPerformed
         // TODO add your handling code here:
+        boolean valid = validateDatan();
+        
+        if (valid){
         String randomEncId;
         randomEncId=String.valueOf(Math.random()*999+100);
         
@@ -1922,6 +2162,17 @@ public class ManageAdminHosp extends javax.swing.JPanel {
         dB4OUtil.storeSystem(ecoSystem);
         System.out.println("Nurse added");
         populateNurseTable(ecoSystem.getNursedirectory(), hospitalList.getSelectedItem().toString());
+        
+        txtAdd3.setText("");
+        txtCity2.setText("");
+        txtState3.setText("");
+        txtZip3.setText("");
+        txtUsrName3.setText("");
+        txtAdd6.setText("");
+        nurseName.setText("");
+        nurseGender.setText("");
+        nurseContact.setText("");
+        }
     }//GEN-LAST:event_createNurseActionPerformed
 
     private void delNurseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_delNurseActionPerformed
@@ -1942,6 +2193,9 @@ public class ManageAdminHosp extends javax.swing.JPanel {
 
     private void createPatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createPatActionPerformed
         // TODO add your handling code here:
+        boolean valid = validateDataP();
+        
+        if (valid){
         String randomEncId;
         randomEncId=String.valueOf(Math.random()*999+100);
         
@@ -1959,8 +2213,19 @@ public class ManageAdminHosp extends javax.swing.JPanel {
         dB4OUtil.storeSystem(ecoSystem);
         System.out.println("Patient added");
         populatePatientTable(ecoSystem.getPatientdirectory(), hospitalList.getSelectedItem().toString());
+           txtAdd4.setText("");
+        patCity.setText("");
+        patState.setText("");
+        patZip.setText("");
+        patUsrName4.setText("");
+        patPwd.setText("");
+        patName.setText("");
+        patGender.setText("");
+         patContact.setText("");
     }//GEN-LAST:event_createPatActionPerformed
 
+    }
+    
     private void viewPatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewPatActionPerformed
         // TODO add your handling code here:
         int selectedRowIndex1=patientTable.getSelectedRow();
@@ -2018,6 +2283,15 @@ public class ManageAdminHosp extends javax.swing.JPanel {
         dB4OUtil.storeSystem(ecoSystem);
         System.out.println("Patient Updated");
         populatePatientTable(ecoSystem.getPatientdirectory(), hospitalList.getSelectedItem().toString());
+        txtAdd4.setText("");
+        patCity.setText("");
+        patState.setText("");
+        patZip.setText("");
+        patUsrName4.setText("");
+        patPwd.setText("");
+        patName.setText("");
+        patGender.setText("");
+         patContact.setText("");
     }//GEN-LAST:event_updatePatActionPerformed
 
     private void delPatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_delPatActionPerformed
