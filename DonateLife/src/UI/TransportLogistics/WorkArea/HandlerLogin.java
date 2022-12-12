@@ -10,6 +10,13 @@ import model.EcoSystem.EcoSystem;
 import model.Enterprise.TransportLogistics.Handler;
 import model.Organization.DonateEntity;
 import UI.MainFrame;
+import java.util.Properties;
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
@@ -116,11 +123,13 @@ public class HandlerLogin extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(this, "Please select a row to add status");
             return;
         }
+        
 
         DefaultTableModel model = (DefaultTableModel) tb1.getModel();
         String id = model.getValueAt(selectedRow, 8).toString();
 //System.out.println("column count " + selectedRow);
-
+        DefaultTableModel model1 = (DefaultTableModel) tb1.getModel();
+        DonateEntity de=(DonateEntity) model1.getValueAt(selectedRow, 8);
         for (DonateEntity c : ecoSystem.getDonateEntityList()) {
             try {
                 if (c.getId().equals(id)) {
@@ -130,11 +139,74 @@ public class HandlerLogin extends javax.swing.JPanel {
 
             }
         }
+         ecoSystem.generateRequesting1(de.getEntityName(), de.getHandler().getName(), de.getTechnician().getName(), de.getReceiverDoctor().getName(), de.getReceiverPatient().getName());
 
         dB4OUtil.storeSystem(ecoSystem);
         populateTable(ho.getEmaildId());
+        String mail = "Status updated for "+de.getEntityName()+" of donor having blood group "+de.getBloodGroup()+" with id: " + de.getId() + " for patient having user name: " + de.getReceiverPatient()+ ". The Transplant Status has been updated by our extremely responsible handler, "+de.getHandler().getName()+". Don't Worry You are in Safe Hands";
+        JOptionPane.showMessageDialog(this, "Status updated & Mail sent successfully.");
+        try{
+        sendMail(mail);
+        }
+        catch(Exception e){}
     }//GEN-LAST:event_addStatusActionPerformed
+public void sendMail(String mail) {
 
+        try {
+            Properties properties = new Properties();
+//            properties.put("mail.smtp.auth", "true");
+//            properties.put("mail.smtp.starttls.enable", "true");
+//            properties.put("mail.smtp.host", "smtp.gmail.com");
+//            properties.put("mail.smtp.port", "587");
+            properties.put("mail.smtp.user", "username");
+
+            properties.put("mail.smtp.host", "smtp.gmail.com");
+            properties.put("mail.smtp.port", "25");
+            properties.put("mail.debug", "true");
+            properties.put("mail.smtp.auth", "true");
+            properties.put("mail.smtp.starttls.enable", "true");
+            properties.put("mail.smtp.EnableSSL.enable", "true");
+
+            properties.setProperty("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
+            properties.setProperty("mail.smtp.socketFactory.fallback", "false");
+            properties.setProperty("mail.smtp.port", "465");
+            properties.setProperty("mail.smtp.socketFactory.port", "465");
+            String myAccountEmail = "aedproj2022@gmail.com";
+            String password = "gesxjnjnaprmmyzy";
+            Session session;
+            session = Session.getInstance(properties, new javax.mail.Authenticator() {
+                @Override
+                protected javax.mail.PasswordAuthentication getPasswordAuthentication() {
+                    return new javax.mail.PasswordAuthentication(myAccountEmail, password);
+                }
+            });
+            Message message = prepareMessage(mail,session, myAccountEmail, "smiti.r.agrawal@gmail.com", "msg", "sub");
+            Transport.send(message);
+// System.out.println("Successful sent");
+        } catch (MessagingException ex) {
+            ex.printStackTrace();
+//            Logger.getLogger(this.getName()).log(Level.SEVERE, null, ex);
+        }
+        catch (Exception e) {
+
+        }
+    }
+
+private static Message prepareMessage(String mail,Session session, String myAccountEmail, String toAddress, String emailmsg, String emailsubject) {
+
+        try {
+            Message message = new MimeMessage(session);
+            message.setFrom(new InternetAddress(myAccountEmail));
+            message.setRecipient(Message.RecipientType.TO, new InternetAddress(toAddress));
+            message.setSubject("Organ & Blood Transplantation System- Status Update");
+            message.setText(mail);
+            return message;
+        } catch (MessagingException ex) {
+            ex.printStackTrace();
+//            Logger.getLogger(this.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
+}
     private void populateTable(String name) {
         DefaultTableModel model = (DefaultTableModel) tb1.getModel();
         model.setRowCount(0);
@@ -170,7 +242,7 @@ public class HandlerLogin extends javax.swing.JPanel {
                 } catch (Exception e) {
 
                 }
-                row[8] = d.getId();
+                row[8] = d;
 
                 model.addRow(row);
             }

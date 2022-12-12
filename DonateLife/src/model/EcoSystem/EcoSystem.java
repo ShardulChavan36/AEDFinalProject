@@ -452,5 +452,26 @@ public void generateRequesting(String donateEntity, String handler, String tech,
         }
 
     }
+public void generateRequesting1(String donateEntity, String handler, String tech,  String doc, String recPat) {
+        Handler h = findHandlerByUname(handler);
+        Technician t = findTechnicianByUname(tech);
+        Doctor d = findDoctorByUserName(doc);
+        Patient p = (Patient) findPatientByUserName(recPat);
+        for (DonateEntity de : donateEntityList) {
+            try {
+                if (de.getId().equals(donateEntity)) {
+                    de.setHandler(h);
+                    de.setTechnician(t);
+                    de.setReceiverDoctor(d);
+                    de.setReceiverPatient(p);
+                    de.setStatus("Requested");
+                    return;
+                }
+            } catch (Exception e) {
+
+            }
+        }
+
+    }
 
 }
