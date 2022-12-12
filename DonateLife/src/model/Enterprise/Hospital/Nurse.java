@@ -31,5 +31,9 @@ public class Nurse extends User {
     public void setHospname(String hospname) {
         this.hospname = hospname;
     }
+     @Override
+    public String toString(){
+        return String.valueOf(name);
+    }
     
 }

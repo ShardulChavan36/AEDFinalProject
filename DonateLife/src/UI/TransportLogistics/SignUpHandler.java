@@ -16,7 +16,7 @@ import javax.swing.SwingUtilities;
 
 /**
  *
- * @author Mayur
+ * @author smiti
  */
 public class SignUpHandler extends javax.swing.JPanel {
 
@@ -76,21 +76,22 @@ public class SignUpHandler extends javax.swing.JPanel {
         txt_dob = new javax.swing.JTextField();
         cmb_vehicle = new javax.swing.JComboBox<>();
         jPanel1 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lbl_admintitle.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
         lbl_admintitle.setText("CREATE HANDLER PROFILE");
-        add(lbl_admintitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 10, -1, -1));
+        add(lbl_admintitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 10, -1, -1));
 
         lbl_name.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lbl_name.setText("Name:");
-        add(lbl_name, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 210, -1, -1));
+        add(lbl_name, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 120, -1, -1));
 
         lbl_uname.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lbl_uname.setText("Username:");
-        add(lbl_uname, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 250, -1, -1));
+        add(lbl_uname, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 160, -1, -1));
 
         txtFullName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -102,29 +103,29 @@ public class SignUpHandler extends javax.swing.JPanel {
                 txtFullNameKeyReleased(evt);
             }
         });
-        add(txtFullName, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 200, 216, -1));
+        add(txtFullName, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 110, 216, -1));
 
         txtUsrName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtUsrNameActionPerformed(evt);
             }
         });
-        add(txtUsrName, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 240, 216, -1));
+        add(txtUsrName, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 150, 216, -1));
 
         lbl_pswd.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lbl_pswd.setText("Password:");
-        add(lbl_pswd, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 290, -1, -1));
+        add(lbl_pswd, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 200, -1, -1));
 
         txtPass.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtPassActionPerformed(evt);
             }
         });
-        add(txtPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 280, 216, -1));
+        add(txtPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 190, 216, -1));
 
         lbl_address.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lbl_address.setText("Address:");
-        add(lbl_address, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 340, -1, -1));
+        add(lbl_address, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 250, -1, -1));
 
         txtAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -136,11 +137,11 @@ public class SignUpHandler extends javax.swing.JPanel {
                 txtAddKeyReleased(evt);
             }
         });
-        add(txtAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 330, 216, -1));
+        add(txtAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 240, 216, -1));
 
         txt_City.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txt_City.setText("City:");
-        add(txt_City, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 380, -1, -1));
+        add(txt_City, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 290, -1, -1));
 
         txtCity.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -152,15 +153,15 @@ public class SignUpHandler extends javax.swing.JPanel {
                 txtCityKeyReleased(evt);
             }
         });
-        add(txtCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 370, 216, -1));
+        add(txtCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 280, 216, -1));
 
         txt_state.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txt_state.setText("State:");
-        add(txt_state, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 420, -1, -1));
+        add(txt_state, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 330, -1, -1));
 
         txt_Zip.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txt_Zip.setText("Zip Code:");
-        add(txt_Zip, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 470, -1, -1));
+        add(txt_Zip, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 380, -1, -1));
 
         txtState.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -172,7 +173,7 @@ public class SignUpHandler extends javax.swing.JPanel {
                 txtStateKeyReleased(evt);
             }
         });
-        add(txtState, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 420, 216, -1));
+        add(txtState, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 330, 216, -1));
 
         txtZip.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -184,7 +185,7 @@ public class SignUpHandler extends javax.swing.JPanel {
                 txtZipKeyReleased(evt);
             }
         });
-        add(txtZip, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 460, 215, -1));
+        add(txtZip, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 370, 215, -1));
 
         btn_back.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btn_back.setText("Back");
@@ -193,11 +194,11 @@ public class SignUpHandler extends javax.swing.JPanel {
                 btn_backActionPerformed(evt);
             }
         });
-        add(btn_back, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 710, 87, -1));
+        add(btn_back, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 600, 87, -1));
 
         lbl_gender.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lbl_gender.setText("Gender:");
-        add(lbl_gender, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 500, -1, -1));
+        add(lbl_gender, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 410, -1, -1));
 
         btn_signup.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btn_signup.setText("Sign Up");
@@ -206,19 +207,19 @@ public class SignUpHandler extends javax.swing.JPanel {
                 btn_signupActionPerformed(evt);
             }
         });
-        add(btn_signup, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 710, 87, -1));
+        add(btn_signup, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 600, 87, -1));
 
         lbl_telenum.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lbl_telenum.setText("Phone no.:");
-        add(lbl_telenum, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 560, -1, -1));
+        add(lbl_telenum, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 470, -1, -1));
 
         cmb_gender.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         cmb_gender.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Male", "Female", "Other" }));
-        add(cmb_gender, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 500, 216, -1));
+        add(cmb_gender, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 410, 216, -1));
 
         lbl_dob.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lbl_dob.setText("Date of Birth:");
-        add(lbl_dob, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 600, -1, -1));
+        add(lbl_dob, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 510, -1, -1));
 
         txt_telenum.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -230,11 +231,11 @@ public class SignUpHandler extends javax.swing.JPanel {
                 txt_telenumKeyReleased(evt);
             }
         });
-        add(txt_telenum, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 550, 216, -1));
+        add(txt_telenum, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 460, 216, -1));
 
         lbl_vehnum.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lbl_vehnum.setText("Vehicle:");
-        add(lbl_vehnum, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 640, -1, -1));
+        add(lbl_vehnum, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 550, -1, -1));
 
         txt_dob.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -246,18 +247,20 @@ public class SignUpHandler extends javax.swing.JPanel {
                 txt_dobKeyReleased(evt);
             }
         });
-        add(txt_dob, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 590, 216, 27));
+        add(txt_dob, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 500, 216, 27));
 
         cmb_vehicle.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        add(cmb_vehicle, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 640, 216, -1));
+        add(cmb_vehicle, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 550, 216, -1));
 
-        jPanel1.setBackground(javax.swing.UIManager.getDefaults().getColor("Button.default.focusColor"));
-        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 180, 380, 570));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255,160));
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 90, 380, 570));
+
+        jLabel2.setBackground(new java.awt.Color(255, 255, 255,160));
+        jLabel2.setOpaque(true);
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 10, 750, 70));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/TransportLogistics/Logistics.jpg"))); // NOI18N
-        jLabel1.setMaximumSize(new java.awt.Dimension(1080, 720));
-        jLabel1.setMinimumSize(new java.awt.Dimension(1080, 720));
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, 1720, 970));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -130, 1720, 970));
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtFullNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFullNameActionPerformed
@@ -422,6 +425,7 @@ public class SignUpHandler extends javax.swing.JPanel {
     private javax.swing.JComboBox<String> cmb_gender;
     private javax.swing.JComboBox<String> cmb_vehicle;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lbl_address;
     private javax.swing.JLabel lbl_admintitle;

@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Mayur
+ * @author shreyasrai
  */
 public class MainLogisticsPage extends javax.swing.JPanel {
 
@@ -50,18 +50,19 @@ public class MainLogisticsPage extends javax.swing.JPanel {
         txtPassword = new javax.swing.JPasswordField();
         btn_login = new javax.swing.JButton();
         btnSignin = new javax.swing.JButton();
-        jPanel1 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
         jLabel1.setText("LOGISTICS");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 20, -1, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 30, -1, -1));
 
         lbl_role.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         lbl_role.setText("Role:");
-        add(lbl_role, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 210, 90, 30));
+        add(lbl_role, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 150, 90, 30));
 
         cmb_Role.setEditable(true);
         cmb_Role.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -71,23 +72,23 @@ public class MainLogisticsPage extends javax.swing.JPanel {
                 cmb_RoleActionPerformed(evt);
             }
         });
-        add(cmb_Role, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 240, 197, -1));
+        add(cmb_Role, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 180, 197, -1));
 
         lbl_username.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         lbl_username.setText("Username:");
-        add(lbl_username, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 270, 150, 30));
-        add(txtUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 300, 197, -1));
+        add(lbl_username, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 210, 150, 30));
+        add(txtUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 240, 197, -1));
 
         lbl_pswd.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         lbl_pswd.setText("Password:");
-        add(lbl_pswd, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 340, -1, -1));
+        add(lbl_pswd, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 280, -1, -1));
 
         txtPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtPasswordActionPerformed(evt);
             }
         });
-        add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 370, 197, -1));
+        add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 310, 197, -1));
 
         btn_login.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         btn_login.setText("Login");
@@ -96,7 +97,7 @@ public class MainLogisticsPage extends javax.swing.JPanel {
                 btn_loginActionPerformed(evt);
             }
         });
-        add(btn_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 440, 86, -1));
+        add(btn_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 390, 86, -1));
 
         btnSignin.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         btnSignin.setText("Sign Up");
@@ -105,16 +106,20 @@ public class MainLogisticsPage extends javax.swing.JPanel {
                 btnSigninActionPerformed(evt);
             }
         });
-        add(btnSignin, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 440, -1, -1));
+        add(btnSignin, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 390, -1, -1));
 
-        jPanel1.setBackground(javax.swing.UIManager.getDefaults().getColor("Button.default.focusColor"));
-        jPanel1.setForeground(javax.swing.UIManager.getDefaults().getColor("Button.default.focusColor"));
-        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 200, 270, 210));
+        jLabel3.setBackground(new java.awt.Color(255, 255, 255, 150));
+        jLabel3.setOpaque(true);
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(348, 36, 340, 50));
+
+        jLabel4.setBackground(new java.awt.Color(204, 204, 204,160));
+        jLabel4.setOpaque(true);
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 140, 290, 210));
 
         jLabel2.setBackground(new java.awt.Color(153, 153, 153));
         jLabel2.setForeground(new java.awt.Color(255, 0, 0));
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/TransportLogistics/Logistics.jpg"))); // NOI18N
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 80, 1390, -1));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1470, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void cmb_RoleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmb_RoleActionPerformed
@@ -220,7 +225,8 @@ public class MainLogisticsPage extends javax.swing.JPanel {
     private javax.swing.JComboBox<String> cmb_Role;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel lbl_pswd;
     private javax.swing.JLabel lbl_role;
     private javax.swing.JLabel lbl_username;

@@ -53,5 +53,9 @@ public class Vehicle {
     public void setDesc(String desc) {
         this.desc = desc;
     }
+    @Override
+    public String toString(){
+        return String.valueOf(vehicleName);
+    }
 
 }

@@ -70,33 +70,35 @@ public class HandlerLogin extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(tb1);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 120, 871, 249));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, 871, 249));
 
-        jButton10.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jButton10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton10.setText("Logout");
+        jButton10.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton10ActionPerformed(evt);
             }
         });
-        add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 460, -1, -1));
+        add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 460, 110, 30));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setText("Status:");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 410, -1, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 410, -1, -1));
         add(txt_report, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 400, 140, 30));
 
-        addStatus.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        addStatus.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         addStatus.setText("Add Status");
+        addStatus.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         addStatus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addStatusActionPerformed(evt);
             }
         });
-        add(addStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 400, -1, -1));
+        add(addStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 400, 100, 30));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/TransportLogistics/Logistics.jpg"))); // NOI18N
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-350, -170, 2060, 1150));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-120, -230, 2060, 1150));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
