@@ -1615,10 +1615,7 @@ public class ManageAdminHosp extends javax.swing.JPanel {
             return false;
         }
 
-           if (doctorSpecialization.getText().length() < 1 || doctorSpecialization.getText().matches("[0-9]")) {
-            JOptionPane.showMessageDialog(this, "Enter Speciality");
-            return false;
-        }
+        
                        
                      
                 return true;

@@ -57,22 +57,26 @@ public class MainAdministrationPage extends javax.swing.JPanel {
         lbl_username.setForeground(new java.awt.Color(255, 255, 255));
         lbl_username.setText("Username:");
         jPanel1.add(lbl_username, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 380, -1, 20));
-        jPanel1.add(txtUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 400, 197, 20));
+
+        txtUsername.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jPanel1.add(txtUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 400, 197, 30));
 
         lbl_pswd.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lbl_pswd.setForeground(new java.awt.Color(255, 255, 255));
         lbl_pswd.setText("Password:");
         jPanel1.add(lbl_pswd, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 450, -1, 20));
-        jPanel1.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 470, 197, 20));
 
-        btn_login.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtPassword.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jPanel1.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 470, 197, 30));
+
+        btn_login.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         btn_login.setText("Login");
         btn_login.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_loginActionPerformed(evt);
             }
         });
-        jPanel1.add(btn_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 530, -1, 20));
+        jPanel1.add(btn_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 530, -1, 30));
 
         jPanel2.setBackground(new java.awt.Color(0, 102, 153));
 
