@@ -599,7 +599,7 @@ MainFrame mainScreen;
         //        Hospital selectedHosp=(Hospital)model1.getValueAt(selectedRowIndex1,0);
         //        Hospital h = ecoSystem.getHospitaldirectory().findHospital(hospitalName);
         //        Doctor d = ecoSystem.findDoctorByUserName(docName);
-        Technician d= (Technician)model.getValueAt(selectedRowIndex1, 1);
+        Technician d= (Technician)model.getValueAt(selectedRowIndex1, 2);
         txtFullName.setText(d.getName());
         txtUsrName.setText(d.getEmaildId());
         txtPass.setText(String.valueOf(d.getPswd()));
@@ -619,7 +619,7 @@ MainFrame mainScreen;
             return;
         }
         DefaultTableModel model = (DefaultTableModel) tb1.getModel();
-        Technician d = (Technician)model.getValueAt(selectedRowIndex1, 1);
+        Technician d = (Technician)model.getValueAt(selectedRowIndex1, 2);
        
         
         String address = txtAdd.getText() + txtCity.getText() + txtState.getText() + txtZip.getText();
@@ -648,7 +648,7 @@ MainFrame mainScreen;
             return;
         }
         DefaultTableModel model = (DefaultTableModel) tb1.getModel();
-        Technician t = (Technician)model.getValueAt(selectedRow, 1);
+        Technician t = (Technician)model.getValueAt(selectedRow, 2);
         System.out.println(" Tech uname: " + t.getEmaildId());
         ecoSystem.deleteTech(t.getEmaildId());
         dB4OUtil.storeSystem(ecoSystem);
