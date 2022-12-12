@@ -165,7 +165,10 @@ public class DonateEntity {
     public void setComm(String comm) {
         this.comm = comm;
     }
-    
+    @Override
+    public String toString(){
+        return String.valueOf(id);
+    }
     
     
 
