@@ -106,7 +106,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         jLabel4.setFont(new java.awt.Font("Gill Sans Ultra Bold", 1, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Logistics");
+        jLabel4.setText("Transport Logistics");
 
         javax.swing.GroupLayout TransportBtnPanelLayout = new javax.swing.GroupLayout(TransportBtnPanel);
         TransportBtnPanel.setLayout(TransportBtnPanelLayout);
@@ -115,8 +115,8 @@ public class MainFrame extends javax.swing.JFrame {
             .addGroup(TransportBtnPanelLayout.createSequentialGroup()
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 165, Short.MAX_VALUE))
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 63, Short.MAX_VALUE))
         );
         TransportBtnPanelLayout.setVerticalGroup(
             TransportBtnPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
