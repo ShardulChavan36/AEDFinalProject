@@ -276,7 +276,7 @@ public class AdminReceiveOrgan extends javax.swing.JPanel {
 
         ecoSystem.generateRequesting(donateEntity, handler, tech, hospital, doc.getSelectedItem().toString(), recPat.getSelectedItem().toString());
         dB4OUtil.storeSystem(ecoSystem);
-        String mail = "Request generated for id: " + donateEntity + " for patient user name: " + recPat.getSelectedItem().toString() + ". Please login and update the required details.";
+        String mail = "Request generated for id: " + donateEntity + " for patient with user name: " + recPat.getSelectedItem().toString() + ". Please login and check the status.";
         
         JOptionPane.showMessageDialog(this, "Request generated & Mail sent successfully.");
         sendMail(mail);
@@ -449,6 +449,7 @@ public class AdminReceiveOrgan extends javax.swing.JPanel {
             ex.printStackTrace();
 //            Logger.getLogger(this.getName()).log(Level.SEVERE, null, ex);
         }
+        
 
     }
 
