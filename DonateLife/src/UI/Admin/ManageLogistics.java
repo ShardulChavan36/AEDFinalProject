@@ -773,7 +773,7 @@ public class ManageLogistics extends javax.swing.JPanel {
         //uname, pswd, id, name, add, gender, telenum, dob
         //(txtFullName.getText(), txtNo.getText(), address, txtUsrName.getText(), txtPass.getText());
 
-        Handler handler = new Handler(txtUsrName.getText(), txtPass1.getText(), "idid", txtFullName.getText(), address,cmb_gender.getSelectedItem().toString(), txt_telenum.getText(), jDateChooser1.getDate(),ecoSystem.getVehicleByNumber(cmb_vehicle.getSelectedItem().toString()));
+        Handler handler = new Handler(txtUsrName1.getText(), txtPass1.getText(), "idid", txtFullName1.getText(), address,cmb_gender.getSelectedItem().toString(), txt_telenum.getText(), jDateChooser1.getDate(),ecoSystem.getVehicleByNumber(cmb_vehicle.getSelectedItem().toString()));
         System.out.println("handler " + handler.getVehicle().getVehicleName());
         ecoSystem.addHandler(handler);
         dB4OUtil.storeSystem(ecoSystem);
