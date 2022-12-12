@@ -582,16 +582,8 @@ public class AdminDoctor extends javax.swing.JPanel {
         }
         DefaultTableModel model = (DefaultTableModel) tb1.getModel();
         Doctor d = (Doctor)model.getValueAt(selectedRowIndex1, 0);
-        String randomEncId;
-        randomEncId=String.valueOf(Math.random()*999+100);
         
-        for(Doctor e:ecoSystem.getDoctordirectory()){
-            if(randomEncId.equals(e.getId())){
-               
-               randomEncId =String.valueOf(Math.random()*999+100);
-            }
-            
-        }
+        
         String address = txtAdd1.getText() + txtCity1.getText() + txtState2.getText() + txtZip2.getText();
 //        Doctor doctor = new Doctor(txtUsrName2.getText(), txtAdd5.getText(), randomEncId, doctorName.getText(), address, doctorContact3.getText(), doctorContact.getText(),jDateChooser1.getDate(),doctorSpecialization.getText(),hospitalList.getSelectedItem().toString());
        d.setAdd(address);

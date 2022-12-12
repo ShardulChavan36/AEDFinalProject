@@ -16,7 +16,7 @@ import javax.swing.SwingUtilities;
 
 /**
  *
- * @author Mayur
+ * @author smiti
  */
 public class SignUpHandler extends javax.swing.JPanel {
 

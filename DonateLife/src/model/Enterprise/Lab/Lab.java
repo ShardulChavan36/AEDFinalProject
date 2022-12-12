@@ -28,5 +28,8 @@ public class Lab extends Enterprise{
     public void setTechdirectory(ArrayList<Technician> techdirectory) {
         this.techdirectory = techdirectory;
     }
-    
+        @Override
+    public String toString(){
+        return String.valueOf(enterpriseName);
+    }
 }

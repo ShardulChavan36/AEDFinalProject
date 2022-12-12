@@ -10,7 +10,7 @@ import model.Location.Address;
  * @author Shardul
  */
 public class Enterprise {
-    private String enterpriseName;
+    public String enterpriseName;
     private String registrationNo;
     private String address;
     private String username;

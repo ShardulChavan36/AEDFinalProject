@@ -39,7 +39,10 @@ private String hospname;
     public void setSpeciality(String speciality) {
         this.speciality = speciality;
     }
-   
+   @Override
+    public String toString(){
+        return String.valueOf(name);
+    }
 
     
 }
