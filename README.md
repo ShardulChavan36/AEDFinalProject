@@ -64,22 +64,4 @@ Shreyas Manish Rai (NUID-002769838)
   
   
 
-**Application Snippets-**
 
-  
-
-![](https://lh4.googleusercontent.com/aE3vVjPvqx_ozJg-F3ErcYBSgK1WTDlLn0ePLuLu-dcqdGM4HxtVW-Tc4mzhFcpMvvSYOcEJ73c9-tGib9Ico13hEguL64JIEcSLJ07cGXNTZGjlpgYVJwQ9AwrkW3UFVN5ZtoC2Dwetfgw87MD1mN-yjRnk5ZQ0TZbktO9o8VMSku_IgNTb0sfld0p8Ng)
-
-  
-  
-  
-
-![](https://lh4.googleusercontent.com/b9Oi5pdN3dAsdEUEi2MNkhmCkqmBMedZPAJADwPQ0UhJ0VBfJdrZFpUrY1oey1GLOHsFa7qLZrbrY4FIqLZQSMmGYe7YtsQLS_EcK1n-3FAgVFGdr4x3Xw-iwy8-Hiuyg9CP85dly56Wxyk79wBefGRpHnKhz75E1kADAM_1IZ76uDgjhnGiZ8PqbjZQ_Q)
-
-![](https://lh5.googleusercontent.com/3SaVA0pTil0O-Fxpr1V4jmmFL5uLyrABwCSEj18l3SjKl0Wi7es66EBiH5yiaDMzlq-wnJvXHVMVM_jv8oKPD0HlFB-ICcIdl5IK5A7CwUJCH1X8PvT-VsyYoDuxCb5WzVbIP_3F5bVY2HM5ySj_jqTEyMvVarR2SKFax8PR5eNtuJYuD-NveYHYtQWvHQ)
-
-  
-  
-  
-
-![](https://lh5.googleusercontent.com/ZpX1FwCBl6-MrmnT1AKmNDYvrijyoYHGsgYIyv5kC_8FTnecDJ-w483FFJVu6aPKrOFpZWnvqOpTnxGYfYzDAwjBVevhVHpwNJkSUqasZJsWvC5Z32_iflzKQoB5luhrQc2Ug3CAYOUb9VEOCz5f2yIHvJI4JyyRusFF4KLQiNgTpDcOJUflYMnes09zAQ)
